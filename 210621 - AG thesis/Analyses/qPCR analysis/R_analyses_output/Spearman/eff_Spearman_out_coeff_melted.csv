@@ -1,0 +1,677 @@
+"Var1","Var2","value"
+"Adeno_logGCpermLsample","Adeno_logGCpermLsample",1
+"CrAss_logGCpermLsample","Adeno_logGCpermLsample",-0.643356643356643
+"PMMV_logGCpermLsample","Adeno_logGCpermLsample",0.013986013986014
+"uidA_logGCpermLsample","Adeno_logGCpermLsample",-0.48951048951049
+"log(Raw Flow (MLD))","Adeno_logGCpermLsample",-0.410241841233154
+"log(TS (mg/L))","Adeno_logGCpermLsample",-0.410241841233154
+"pH_Grab","Adeno_logGCpermLsample",0.518200220505037
+"log(Turbidity (NTU))","Adeno_logGCpermLsample",0.626158599776919
+"log(TSS (mg/L))","Adeno_logGCpermLsample",0.819346490398703
+"log(BOD (mg/L))","Adeno_logGCpermLsample",0.410241841233154
+"log(cBOD (mg/L))","Adeno_logGCpermLsample",0.216216434966324
+"log(sCOD (mg/L))","Adeno_logGCpermLsample",0
+"log(COD (mg/L))","Adeno_logGCpermLsample",0
+"log(NH4-N (mg/L))","Adeno_logGCpermLsample",0.410241841233154
+"log(NOx-N (mg/L))","Adeno_logGCpermLsample",-0.410241841233154
+"log(PO4-P (mg/L))","Adeno_logGCpermLsample",-0.690933627340049
+"log(TP (mg/L))","Adeno_logGCpermLsample",-0.280691786106895
+"log(TOC (mg/L))","Adeno_logGCpermLsample",0.410241841233154
+"log(TN (mg/L))","Adeno_logGCpermLsample",0.410241841233154
+"log(Grab Flow (MLD))","Adeno_logGCpermLsample",0.215916758543765
+"log(Grab Temp (C))","Adeno_logGCpermLsample",-0.853485927498649
+"log(Filtered UVT_Grab (%))","Adeno_logGCpermLsample",0
+"log(E-coli (MPN/mL))","Adeno_logGCpermLsample",0.580370430699081
+"log(Fecal (MPN/mL))","Adeno_logGCpermLsample",0.863667034175061
+"Cumulative 3-day pre-sampling-day precip (mm)","Adeno_logGCpermLsample",0.139373668334515
+"log(Mean temp (K))","Adeno_logGCpermLsample",-0.410241841233154
+"Adeno_logGCpermLsample","CrAss_logGCpermLsample",-0.643356643356643
+"CrAss_logGCpermLsample","CrAss_logGCpermLsample",1
+"PMMV_logGCpermLsample","CrAss_logGCpermLsample",-0.27972027972028
+"uidA_logGCpermLsample","CrAss_logGCpermLsample",0.846153846153846
+"log(Raw Flow (MLD))","CrAss_logGCpermLsample",0.237508434398142
+"log(TS (mg/L))","CrAss_logGCpermLsample",0.237508434398142
+"pH_Grab","CrAss_logGCpermLsample",-0.734116979048802
+"log(Turbidity (NTU))","CrAss_logGCpermLsample",-0.626158599776919
+"log(TSS (mg/L))","CrAss_logGCpermLsample",-0.682788741998919
+"log(BOD (mg/L))","CrAss_logGCpermLsample",-0.237508434398142
+"log(cBOD (mg/L))","CrAss_logGCpermLsample",0.0341394370999459
+"log(sCOD (mg/L))","CrAss_logGCpermLsample",0.302283461961271
+"log(COD (mg/L))","CrAss_logGCpermLsample",0.302283461961271
+"log(NH4-N (mg/L))","CrAss_logGCpermLsample",-0.237508434398142
+"log(NOx-N (mg/L))","CrAss_logGCpermLsample",0.237508434398142
+"log(PO4-P (mg/L))","CrAss_logGCpermLsample",0.475016868796284
+"log(TP (mg/L))","CrAss_logGCpermLsample",-0.0647750275631296
+"log(TOC (mg/L))","CrAss_logGCpermLsample",-0.237508434398142
+"log(TN (mg/L))","CrAss_logGCpermLsample",-0.237508434398142
+"log(Grab Flow (MLD))","CrAss_logGCpermLsample",-0.0863667034175061
+"log(Grab Temp (C))","CrAss_logGCpermLsample",0.921764801698541
+"log(Filtered UVT_Grab (%))","CrAss_logGCpermLsample",-0.302283461961271
+"log(E-coli (MPN/mL))","CrAss_logGCpermLsample",-0.375533808099405
+"log(Fecal (MPN/mL))","CrAss_logGCpermLsample",-0.820483682466308
+"Cumulative 3-day pre-sampling-day precip (mm)","CrAss_logGCpermLsample",-0.250872603002127
+"log(Mean temp (K))","CrAss_logGCpermLsample",0.237508434398142
+"Adeno_logGCpermLsample","PMMV_logGCpermLsample",0.013986013986014
+"CrAss_logGCpermLsample","PMMV_logGCpermLsample",-0.27972027972028
+"PMMV_logGCpermLsample","PMMV_logGCpermLsample",1
+"uidA_logGCpermLsample","PMMV_logGCpermLsample",-0.265734265734266
+"log(Raw Flow (MLD))","PMMV_logGCpermLsample",0.777300330757555
+"log(TS (mg/L))","PMMV_logGCpermLsample",0.777300330757555
+"pH_Grab","PMMV_logGCpermLsample",0.777300330757555
+"log(Turbidity (NTU))","PMMV_logGCpermLsample",0.388650165378777
+"log(TSS (mg/L))","PMMV_logGCpermLsample",-0.307254933899514
+"log(BOD (mg/L))","PMMV_logGCpermLsample",-0.777300330757555
+"log(cBOD (mg/L))","PMMV_logGCpermLsample",-0.921764801698541
+"log(sCOD (mg/L))","PMMV_logGCpermLsample",-0.971625413446944
+"log(COD (mg/L))","PMMV_logGCpermLsample",-0.971625413446944
+"log(NH4-N (mg/L))","PMMV_logGCpermLsample",-0.777300330757555
+"log(NOx-N (mg/L))","PMMV_logGCpermLsample",0.777300330757555
+"log(PO4-P (mg/L))","PMMV_logGCpermLsample",0.582975248068166
+"log(TP (mg/L))","PMMV_logGCpermLsample",0.777300330757555
+"log(TOC (mg/L))","PMMV_logGCpermLsample",-0.777300330757555
+"log(TN (mg/L))","PMMV_logGCpermLsample",-0.777300330757555
+"log(Grab Flow (MLD))","PMMV_logGCpermLsample",0.194325082689389
+"log(Grab Temp (C))","PMMV_logGCpermLsample",-0.204836622599676
+"log(Filtered UVT_Grab (%))","PMMV_logGCpermLsample",0.971625413446944
+"log(E-coli (MPN/mL))","PMMV_logGCpermLsample",-0.716928179098865
+"log(Fecal (MPN/mL))","PMMV_logGCpermLsample",0
+"Cumulative 3-day pre-sampling-day precip (mm)","PMMV_logGCpermLsample",0.752617809006382
+"log(Mean temp (K))","PMMV_logGCpermLsample",0.777300330757555
+"Adeno_logGCpermLsample","uidA_logGCpermLsample",-0.48951048951049
+"CrAss_logGCpermLsample","uidA_logGCpermLsample",0.846153846153846
+"PMMV_logGCpermLsample","uidA_logGCpermLsample",-0.265734265734266
+"uidA_logGCpermLsample","uidA_logGCpermLsample",1
+"log(Raw Flow (MLD))","uidA_logGCpermLsample",0.323875137815648
+"log(TS (mg/L))","uidA_logGCpermLsample",0.323875137815648
+"pH_Grab","uidA_logGCpermLsample",-0.518200220505037
+"log(Turbidity (NTU))","uidA_logGCpermLsample",-0.194325082689389
+"log(TSS (mg/L))","uidA_logGCpermLsample",-0.409673245199351
+"log(BOD (mg/L))","uidA_logGCpermLsample",-0.323875137815648
+"log(cBOD (mg/L))","uidA_logGCpermLsample",-0.0341394370999459
+"log(sCOD (mg/L))","uidA_logGCpermLsample",0.259100110252518
+"log(COD (mg/L))","uidA_logGCpermLsample",0.259100110252518
+"log(NH4-N (mg/L))","uidA_logGCpermLsample",-0.323875137815648
+"log(NOx-N (mg/L))","uidA_logGCpermLsample",0.323875137815648
+"log(PO4-P (mg/L))","uidA_logGCpermLsample",0.259100110252518
+"log(TP (mg/L))","uidA_logGCpermLsample",-0.323875137815648
+"log(TOC (mg/L))","uidA_logGCpermLsample",-0.323875137815648
+"log(TN (mg/L))","uidA_logGCpermLsample",-0.323875137815648
+"log(Grab Flow (MLD))","uidA_logGCpermLsample",0.388650165378777
+"log(Grab Temp (C))","uidA_logGCpermLsample",0.716928179098865
+"log(Filtered UVT_Grab (%))","uidA_logGCpermLsample",-0.259100110252518
+"log(E-coli (MPN/mL))","uidA_logGCpermLsample",-0.307254933899514
+"log(Fecal (MPN/mL))","uidA_logGCpermLsample",-0.518200220505037
+"Cumulative 3-day pre-sampling-day precip (mm)","uidA_logGCpermLsample",0.0836242010007091
+"log(Mean temp (K))","uidA_logGCpermLsample",0.323875137815648
+"Adeno_logGCpermLsample","log(Raw Flow (MLD))",-0.410241841233154
+"CrAss_logGCpermLsample","log(Raw Flow (MLD))",0.237508434398142
+"PMMV_logGCpermLsample","log(Raw Flow (MLD))",0.777300330757555
+"uidA_logGCpermLsample","log(Raw Flow (MLD))",0.323875137815648
+"log(Raw Flow (MLD))","log(Raw Flow (MLD))",1
+"log(TS (mg/L))","log(Raw Flow (MLD))",1
+"pH_Grab","log(Raw Flow (MLD))",0.4
+"log(Turbidity (NTU))","log(Raw Flow (MLD))",0.2
+"log(TSS (mg/L))","log(Raw Flow (MLD))",-0.632455532033676
+"log(BOD (mg/L))","log(Raw Flow (MLD))",-1
+"log(cBOD (mg/L))","log(Raw Flow (MLD))",-0.948683298050514
+"log(sCOD (mg/L))","log(Raw Flow (MLD))",-0.8
+"log(COD (mg/L))","log(Raw Flow (MLD))",-0.8
+"log(NH4-N (mg/L))","log(Raw Flow (MLD))",-1
+"log(NOx-N (mg/L))","log(Raw Flow (MLD))",1
+"log(PO4-P (mg/L))","log(Raw Flow (MLD))",0.8
+"log(TP (mg/L))","log(Raw Flow (MLD))",0.6
+"log(TOC (mg/L))","log(Raw Flow (MLD))",-1
+"log(TN (mg/L))","log(Raw Flow (MLD))",-1
+"log(Grab Flow (MLD))","log(Raw Flow (MLD))",0.4
+"log(Grab Temp (C))","log(Raw Flow (MLD))",0.316227766016838
+"log(Filtered UVT_Grab (%))","log(Raw Flow (MLD))",0.8
+"log(E-coli (MPN/mL))","log(Raw Flow (MLD))",-0.948683298050514
+"log(Fecal (MPN/mL))","log(Raw Flow (MLD))",-0.4
+"Cumulative 3-day pre-sampling-day precip (mm)","log(Raw Flow (MLD))",0.774596669241483
+"log(Mean temp (K))","log(Raw Flow (MLD))",1
+"Adeno_logGCpermLsample","log(TS (mg/L))",-0.410241841233154
+"CrAss_logGCpermLsample","log(TS (mg/L))",0.237508434398142
+"PMMV_logGCpermLsample","log(TS (mg/L))",0.777300330757555
+"uidA_logGCpermLsample","log(TS (mg/L))",0.323875137815648
+"log(Raw Flow (MLD))","log(TS (mg/L))",1
+"log(TS (mg/L))","log(TS (mg/L))",1
+"pH_Grab","log(TS (mg/L))",0.4
+"log(Turbidity (NTU))","log(TS (mg/L))",0.2
+"log(TSS (mg/L))","log(TS (mg/L))",-0.632455532033676
+"log(BOD (mg/L))","log(TS (mg/L))",-1
+"log(cBOD (mg/L))","log(TS (mg/L))",-0.948683298050514
+"log(sCOD (mg/L))","log(TS (mg/L))",-0.8
+"log(COD (mg/L))","log(TS (mg/L))",-0.8
+"log(NH4-N (mg/L))","log(TS (mg/L))",-1
+"log(NOx-N (mg/L))","log(TS (mg/L))",1
+"log(PO4-P (mg/L))","log(TS (mg/L))",0.8
+"log(TP (mg/L))","log(TS (mg/L))",0.6
+"log(TOC (mg/L))","log(TS (mg/L))",-1
+"log(TN (mg/L))","log(TS (mg/L))",-1
+"log(Grab Flow (MLD))","log(TS (mg/L))",0.4
+"log(Grab Temp (C))","log(TS (mg/L))",0.316227766016838
+"log(Filtered UVT_Grab (%))","log(TS (mg/L))",0.8
+"log(E-coli (MPN/mL))","log(TS (mg/L))",-0.948683298050514
+"log(Fecal (MPN/mL))","log(TS (mg/L))",-0.4
+"Cumulative 3-day pre-sampling-day precip (mm)","log(TS (mg/L))",0.774596669241483
+"log(Mean temp (K))","log(TS (mg/L))",1
+"Adeno_logGCpermLsample","pH_Grab",0.518200220505037
+"CrAss_logGCpermLsample","pH_Grab",-0.734116979048802
+"PMMV_logGCpermLsample","pH_Grab",0.777300330757555
+"uidA_logGCpermLsample","pH_Grab",-0.518200220505037
+"log(Raw Flow (MLD))","pH_Grab",0.4
+"log(TS (mg/L))","pH_Grab",0.4
+"pH_Grab","pH_Grab",1
+"log(Turbidity (NTU))","pH_Grab",0.8
+"log(TSS (mg/L))","pH_Grab",0.316227766016838
+"log(BOD (mg/L))","pH_Grab",-0.4
+"log(cBOD (mg/L))","pH_Grab",-0.632455532033676
+"log(sCOD (mg/L))","pH_Grab",-0.8
+"log(COD (mg/L))","pH_Grab",-0.8
+"log(NH4-N (mg/L))","pH_Grab",-0.4
+"log(NOx-N (mg/L))","pH_Grab",0.4
+"log(PO4-P (mg/L))","pH_Grab",0
+"log(TP (mg/L))","pH_Grab",0.4
+"log(TOC (mg/L))","pH_Grab",-0.4
+"log(TN (mg/L))","pH_Grab",-0.4
+"log(Grab Flow (MLD))","pH_Grab",0.4
+"log(Grab Temp (C))","pH_Grab",-0.737864787372622
+"log(Filtered UVT_Grab (%))","pH_Grab",0.8
+"log(E-coli (MPN/mL))","pH_Grab",-0.210818510677892
+"log(Fecal (MPN/mL))","pH_Grab",0.6
+"Cumulative 3-day pre-sampling-day precip (mm)","pH_Grab",0.774596669241483
+"log(Mean temp (K))","pH_Grab",0.4
+"Adeno_logGCpermLsample","log(Turbidity (NTU))",0.626158599776919
+"CrAss_logGCpermLsample","log(Turbidity (NTU))",-0.626158599776919
+"PMMV_logGCpermLsample","log(Turbidity (NTU))",0.388650165378777
+"uidA_logGCpermLsample","log(Turbidity (NTU))",-0.194325082689389
+"log(Raw Flow (MLD))","log(Turbidity (NTU))",0.2
+"log(TS (mg/L))","log(Turbidity (NTU))",0.2
+"pH_Grab","log(Turbidity (NTU))",0.8
+"log(Turbidity (NTU))","log(Turbidity (NTU))",1
+"log(TSS (mg/L))","log(Turbidity (NTU))",0.632455532033676
+"log(BOD (mg/L))","log(Turbidity (NTU))",-0.2
+"log(cBOD (mg/L))","log(Turbidity (NTU))",-0.316227766016838
+"log(sCOD (mg/L))","log(Turbidity (NTU))",-0.4
+"log(COD (mg/L))","log(Turbidity (NTU))",-0.4
+"log(NH4-N (mg/L))","log(Turbidity (NTU))",-0.2
+"log(NOx-N (mg/L))","log(Turbidity (NTU))",0.2
+"log(PO4-P (mg/L))","log(Turbidity (NTU))",-0.4
+"log(TP (mg/L))","log(Turbidity (NTU))",-0.2
+"log(TOC (mg/L))","log(Turbidity (NTU))",-0.2
+"log(TN (mg/L))","log(Turbidity (NTU))",-0.2
+"log(Grab Flow (MLD))","log(Turbidity (NTU))",0.8
+"log(Grab Temp (C))","log(Turbidity (NTU))",-0.737864787372622
+"log(Filtered UVT_Grab (%))","log(Turbidity (NTU))",0.4
+"log(E-coli (MPN/mL))","log(Turbidity (NTU))",0.105409255338946
+"log(Fecal (MPN/mL))","log(Turbidity (NTU))",0.8
+"Cumulative 3-day pre-sampling-day precip (mm)","log(Turbidity (NTU))",0.774596669241483
+"log(Mean temp (K))","log(Turbidity (NTU))",0.2
+"Adeno_logGCpermLsample","log(TSS (mg/L))",0.819346490398703
+"CrAss_logGCpermLsample","log(TSS (mg/L))",-0.682788741998919
+"PMMV_logGCpermLsample","log(TSS (mg/L))",-0.307254933899514
+"uidA_logGCpermLsample","log(TSS (mg/L))",-0.409673245199351
+"log(Raw Flow (MLD))","log(TSS (mg/L))",-0.632455532033676
+"log(TS (mg/L))","log(TSS (mg/L))",-0.632455532033676
+"pH_Grab","log(TSS (mg/L))",0.316227766016838
+"log(Turbidity (NTU))","log(TSS (mg/L))",0.632455532033676
+"log(TSS (mg/L))","log(TSS (mg/L))",1
+"log(BOD (mg/L))","log(TSS (mg/L))",0.632455532033676
+"log(cBOD (mg/L))","log(TSS (mg/L))",0.5
+"log(sCOD (mg/L))","log(TSS (mg/L))",0.316227766016838
+"log(COD (mg/L))","log(TSS (mg/L))",0.316227766016838
+"log(NH4-N (mg/L))","log(TSS (mg/L))",0.632455532033676
+"log(NOx-N (mg/L))","log(TSS (mg/L))",-0.632455532033676
+"log(PO4-P (mg/L))","log(TSS (mg/L))",-0.948683298050514
+"log(TP (mg/L))","log(TSS (mg/L))",-0.632455532033676
+"log(TOC (mg/L))","log(TSS (mg/L))",0.632455532033676
+"log(TN (mg/L))","log(TSS (mg/L))",0.632455532033676
+"log(Grab Flow (MLD))","log(TSS (mg/L))",0.316227766016838
+"log(Grab Temp (C))","log(TSS (mg/L))",-0.833333333333333
+"log(Filtered UVT_Grab (%))","log(TSS (mg/L))",-0.316227766016838
+"log(E-coli (MPN/mL))","log(TSS (mg/L))",0.833333333333333
+"log(Fecal (MPN/mL))","log(TSS (mg/L))",0.948683298050514
+"Cumulative 3-day pre-sampling-day precip (mm)","log(TSS (mg/L))",0
+"log(Mean temp (K))","log(TSS (mg/L))",-0.632455532033676
+"Adeno_logGCpermLsample","log(BOD (mg/L))",0.410241841233154
+"CrAss_logGCpermLsample","log(BOD (mg/L))",-0.237508434398142
+"PMMV_logGCpermLsample","log(BOD (mg/L))",-0.777300330757555
+"uidA_logGCpermLsample","log(BOD (mg/L))",-0.323875137815648
+"log(Raw Flow (MLD))","log(BOD (mg/L))",-1
+"log(TS (mg/L))","log(BOD (mg/L))",-1
+"pH_Grab","log(BOD (mg/L))",-0.4
+"log(Turbidity (NTU))","log(BOD (mg/L))",-0.2
+"log(TSS (mg/L))","log(BOD (mg/L))",0.632455532033676
+"log(BOD (mg/L))","log(BOD (mg/L))",1
+"log(cBOD (mg/L))","log(BOD (mg/L))",0.948683298050514
+"log(sCOD (mg/L))","log(BOD (mg/L))",0.8
+"log(COD (mg/L))","log(BOD (mg/L))",0.8
+"log(NH4-N (mg/L))","log(BOD (mg/L))",1
+"log(NOx-N (mg/L))","log(BOD (mg/L))",-1
+"log(PO4-P (mg/L))","log(BOD (mg/L))",-0.8
+"log(TP (mg/L))","log(BOD (mg/L))",-0.6
+"log(TOC (mg/L))","log(BOD (mg/L))",1
+"log(TN (mg/L))","log(BOD (mg/L))",1
+"log(Grab Flow (MLD))","log(BOD (mg/L))",-0.4
+"log(Grab Temp (C))","log(BOD (mg/L))",-0.316227766016838
+"log(Filtered UVT_Grab (%))","log(BOD (mg/L))",-0.8
+"log(E-coli (MPN/mL))","log(BOD (mg/L))",0.948683298050514
+"log(Fecal (MPN/mL))","log(BOD (mg/L))",0.4
+"Cumulative 3-day pre-sampling-day precip (mm)","log(BOD (mg/L))",-0.774596669241483
+"log(Mean temp (K))","log(BOD (mg/L))",-1
+"Adeno_logGCpermLsample","log(cBOD (mg/L))",0.216216434966324
+"CrAss_logGCpermLsample","log(cBOD (mg/L))",0.0341394370999459
+"PMMV_logGCpermLsample","log(cBOD (mg/L))",-0.921764801698541
+"uidA_logGCpermLsample","log(cBOD (mg/L))",-0.0341394370999459
+"log(Raw Flow (MLD))","log(cBOD (mg/L))",-0.948683298050514
+"log(TS (mg/L))","log(cBOD (mg/L))",-0.948683298050514
+"pH_Grab","log(cBOD (mg/L))",-0.632455532033676
+"log(Turbidity (NTU))","log(cBOD (mg/L))",-0.316227766016838
+"log(TSS (mg/L))","log(cBOD (mg/L))",0.5
+"log(BOD (mg/L))","log(cBOD (mg/L))",0.948683298050514
+"log(cBOD (mg/L))","log(cBOD (mg/L))",1
+"log(sCOD (mg/L))","log(cBOD (mg/L))",0.948683298050514
+"log(COD (mg/L))","log(cBOD (mg/L))",0.948683298050514
+"log(NH4-N (mg/L))","log(cBOD (mg/L))",0.948683298050514
+"log(NOx-N (mg/L))","log(cBOD (mg/L))",-0.948683298050514
+"log(PO4-P (mg/L))","log(cBOD (mg/L))",-0.737864787372622
+"log(TP (mg/L))","log(cBOD (mg/L))",-0.737864787372622
+"log(TOC (mg/L))","log(cBOD (mg/L))",0.948683298050514
+"log(TN (mg/L))","log(cBOD (mg/L))",0.948683298050514
+"log(Grab Flow (MLD))","log(cBOD (mg/L))",-0.316227766016838
+"log(Grab Temp (C))","log(cBOD (mg/L))",-0.0555555555555556
+"log(Filtered UVT_Grab (%))","log(cBOD (mg/L))",-0.948683298050514
+"log(E-coli (MPN/mL))","log(cBOD (mg/L))",0.888888888888889
+"log(Fecal (MPN/mL))","log(cBOD (mg/L))",0.210818510677892
+"Cumulative 3-day pre-sampling-day precip (mm)","log(cBOD (mg/L))",-0.816496580927726
+"log(Mean temp (K))","log(cBOD (mg/L))",-0.948683298050514
+"Adeno_logGCpermLsample","log(sCOD (mg/L))",0
+"CrAss_logGCpermLsample","log(sCOD (mg/L))",0.302283461961271
+"PMMV_logGCpermLsample","log(sCOD (mg/L))",-0.971625413446944
+"uidA_logGCpermLsample","log(sCOD (mg/L))",0.259100110252518
+"log(Raw Flow (MLD))","log(sCOD (mg/L))",-0.8
+"log(TS (mg/L))","log(sCOD (mg/L))",-0.8
+"pH_Grab","log(sCOD (mg/L))",-0.8
+"log(Turbidity (NTU))","log(sCOD (mg/L))",-0.4
+"log(TSS (mg/L))","log(sCOD (mg/L))",0.316227766016838
+"log(BOD (mg/L))","log(sCOD (mg/L))",0.8
+"log(cBOD (mg/L))","log(sCOD (mg/L))",0.948683298050514
+"log(sCOD (mg/L))","log(sCOD (mg/L))",1
+"log(COD (mg/L))","log(sCOD (mg/L))",1
+"log(NH4-N (mg/L))","log(sCOD (mg/L))",0.8
+"log(NOx-N (mg/L))","log(sCOD (mg/L))",-0.8
+"log(PO4-P (mg/L))","log(sCOD (mg/L))",-0.6
+"log(TP (mg/L))","log(sCOD (mg/L))",-0.8
+"log(TOC (mg/L))","log(sCOD (mg/L))",0.8
+"log(TN (mg/L))","log(sCOD (mg/L))",0.8
+"log(Grab Flow (MLD))","log(sCOD (mg/L))",-0.2
+"log(Grab Temp (C))","log(sCOD (mg/L))",0.210818510677892
+"log(Filtered UVT_Grab (%))","log(sCOD (mg/L))",-1
+"log(E-coli (MPN/mL))","log(sCOD (mg/L))",0.737864787372622
+"log(Fecal (MPN/mL))","log(sCOD (mg/L))",0
+"Cumulative 3-day pre-sampling-day precip (mm)","log(sCOD (mg/L))",-0.774596669241483
+"log(Mean temp (K))","log(sCOD (mg/L))",-0.8
+"Adeno_logGCpermLsample","log(COD (mg/L))",0
+"CrAss_logGCpermLsample","log(COD (mg/L))",0.302283461961271
+"PMMV_logGCpermLsample","log(COD (mg/L))",-0.971625413446944
+"uidA_logGCpermLsample","log(COD (mg/L))",0.259100110252518
+"log(Raw Flow (MLD))","log(COD (mg/L))",-0.8
+"log(TS (mg/L))","log(COD (mg/L))",-0.8
+"pH_Grab","log(COD (mg/L))",-0.8
+"log(Turbidity (NTU))","log(COD (mg/L))",-0.4
+"log(TSS (mg/L))","log(COD (mg/L))",0.316227766016838
+"log(BOD (mg/L))","log(COD (mg/L))",0.8
+"log(cBOD (mg/L))","log(COD (mg/L))",0.948683298050514
+"log(sCOD (mg/L))","log(COD (mg/L))",1
+"log(COD (mg/L))","log(COD (mg/L))",1
+"log(NH4-N (mg/L))","log(COD (mg/L))",0.8
+"log(NOx-N (mg/L))","log(COD (mg/L))",-0.8
+"log(PO4-P (mg/L))","log(COD (mg/L))",-0.6
+"log(TP (mg/L))","log(COD (mg/L))",-0.8
+"log(TOC (mg/L))","log(COD (mg/L))",0.8
+"log(TN (mg/L))","log(COD (mg/L))",0.8
+"log(Grab Flow (MLD))","log(COD (mg/L))",-0.2
+"log(Grab Temp (C))","log(COD (mg/L))",0.210818510677892
+"log(Filtered UVT_Grab (%))","log(COD (mg/L))",-1
+"log(E-coli (MPN/mL))","log(COD (mg/L))",0.737864787372622
+"log(Fecal (MPN/mL))","log(COD (mg/L))",0
+"Cumulative 3-day pre-sampling-day precip (mm)","log(COD (mg/L))",-0.774596669241483
+"log(Mean temp (K))","log(COD (mg/L))",-0.8
+"Adeno_logGCpermLsample","log(NH4-N (mg/L))",0.410241841233154
+"CrAss_logGCpermLsample","log(NH4-N (mg/L))",-0.237508434398142
+"PMMV_logGCpermLsample","log(NH4-N (mg/L))",-0.777300330757555
+"uidA_logGCpermLsample","log(NH4-N (mg/L))",-0.323875137815648
+"log(Raw Flow (MLD))","log(NH4-N (mg/L))",-1
+"log(TS (mg/L))","log(NH4-N (mg/L))",-1
+"pH_Grab","log(NH4-N (mg/L))",-0.4
+"log(Turbidity (NTU))","log(NH4-N (mg/L))",-0.2
+"log(TSS (mg/L))","log(NH4-N (mg/L))",0.632455532033676
+"log(BOD (mg/L))","log(NH4-N (mg/L))",1
+"log(cBOD (mg/L))","log(NH4-N (mg/L))",0.948683298050514
+"log(sCOD (mg/L))","log(NH4-N (mg/L))",0.8
+"log(COD (mg/L))","log(NH4-N (mg/L))",0.8
+"log(NH4-N (mg/L))","log(NH4-N (mg/L))",1
+"log(NOx-N (mg/L))","log(NH4-N (mg/L))",-1
+"log(PO4-P (mg/L))","log(NH4-N (mg/L))",-0.8
+"log(TP (mg/L))","log(NH4-N (mg/L))",-0.6
+"log(TOC (mg/L))","log(NH4-N (mg/L))",1
+"log(TN (mg/L))","log(NH4-N (mg/L))",1
+"log(Grab Flow (MLD))","log(NH4-N (mg/L))",-0.4
+"log(Grab Temp (C))","log(NH4-N (mg/L))",-0.316227766016838
+"log(Filtered UVT_Grab (%))","log(NH4-N (mg/L))",-0.8
+"log(E-coli (MPN/mL))","log(NH4-N (mg/L))",0.948683298050514
+"log(Fecal (MPN/mL))","log(NH4-N (mg/L))",0.4
+"Cumulative 3-day pre-sampling-day precip (mm)","log(NH4-N (mg/L))",-0.774596669241483
+"log(Mean temp (K))","log(NH4-N (mg/L))",-1
+"Adeno_logGCpermLsample","log(NOx-N (mg/L))",-0.410241841233154
+"CrAss_logGCpermLsample","log(NOx-N (mg/L))",0.237508434398142
+"PMMV_logGCpermLsample","log(NOx-N (mg/L))",0.777300330757555
+"uidA_logGCpermLsample","log(NOx-N (mg/L))",0.323875137815648
+"log(Raw Flow (MLD))","log(NOx-N (mg/L))",1
+"log(TS (mg/L))","log(NOx-N (mg/L))",1
+"pH_Grab","log(NOx-N (mg/L))",0.4
+"log(Turbidity (NTU))","log(NOx-N (mg/L))",0.2
+"log(TSS (mg/L))","log(NOx-N (mg/L))",-0.632455532033676
+"log(BOD (mg/L))","log(NOx-N (mg/L))",-1
+"log(cBOD (mg/L))","log(NOx-N (mg/L))",-0.948683298050514
+"log(sCOD (mg/L))","log(NOx-N (mg/L))",-0.8
+"log(COD (mg/L))","log(NOx-N (mg/L))",-0.8
+"log(NH4-N (mg/L))","log(NOx-N (mg/L))",-1
+"log(NOx-N (mg/L))","log(NOx-N (mg/L))",1
+"log(PO4-P (mg/L))","log(NOx-N (mg/L))",0.8
+"log(TP (mg/L))","log(NOx-N (mg/L))",0.6
+"log(TOC (mg/L))","log(NOx-N (mg/L))",-1
+"log(TN (mg/L))","log(NOx-N (mg/L))",-1
+"log(Grab Flow (MLD))","log(NOx-N (mg/L))",0.4
+"log(Grab Temp (C))","log(NOx-N (mg/L))",0.316227766016838
+"log(Filtered UVT_Grab (%))","log(NOx-N (mg/L))",0.8
+"log(E-coli (MPN/mL))","log(NOx-N (mg/L))",-0.948683298050514
+"log(Fecal (MPN/mL))","log(NOx-N (mg/L))",-0.4
+"Cumulative 3-day pre-sampling-day precip (mm)","log(NOx-N (mg/L))",0.774596669241483
+"log(Mean temp (K))","log(NOx-N (mg/L))",1
+"Adeno_logGCpermLsample","log(PO4-P (mg/L))",-0.690933627340049
+"CrAss_logGCpermLsample","log(PO4-P (mg/L))",0.475016868796284
+"PMMV_logGCpermLsample","log(PO4-P (mg/L))",0.582975248068166
+"uidA_logGCpermLsample","log(PO4-P (mg/L))",0.259100110252518
+"log(Raw Flow (MLD))","log(PO4-P (mg/L))",0.8
+"log(TS (mg/L))","log(PO4-P (mg/L))",0.8
+"pH_Grab","log(PO4-P (mg/L))",0
+"log(Turbidity (NTU))","log(PO4-P (mg/L))",-0.4
+"log(TSS (mg/L))","log(PO4-P (mg/L))",-0.948683298050514
+"log(BOD (mg/L))","log(PO4-P (mg/L))",-0.8
+"log(cBOD (mg/L))","log(PO4-P (mg/L))",-0.737864787372622
+"log(sCOD (mg/L))","log(PO4-P (mg/L))",-0.6
+"log(COD (mg/L))","log(PO4-P (mg/L))",-0.6
+"log(NH4-N (mg/L))","log(PO4-P (mg/L))",-0.8
+"log(NOx-N (mg/L))","log(PO4-P (mg/L))",0.8
+"log(PO4-P (mg/L))","log(PO4-P (mg/L))",1
+"log(TP (mg/L))","log(PO4-P (mg/L))",0.8
+"log(TOC (mg/L))","log(PO4-P (mg/L))",-0.8
+"log(TN (mg/L))","log(PO4-P (mg/L))",-0.8
+"log(Grab Flow (MLD))","log(PO4-P (mg/L))",-0.2
+"log(Grab Temp (C))","log(PO4-P (mg/L))",0.632455532033676
+"log(Filtered UVT_Grab (%))","log(PO4-P (mg/L))",0.6
+"log(E-coli (MPN/mL))","log(PO4-P (mg/L))",-0.948683298050514
+"log(Fecal (MPN/mL))","log(PO4-P (mg/L))",-0.8
+"Cumulative 3-day pre-sampling-day precip (mm)","log(PO4-P (mg/L))",0.258198889747161
+"log(Mean temp (K))","log(PO4-P (mg/L))",0.8
+"Adeno_logGCpermLsample","log(TP (mg/L))",-0.280691786106895
+"CrAss_logGCpermLsample","log(TP (mg/L))",-0.0647750275631296
+"PMMV_logGCpermLsample","log(TP (mg/L))",0.777300330757555
+"uidA_logGCpermLsample","log(TP (mg/L))",-0.323875137815648
+"log(Raw Flow (MLD))","log(TP (mg/L))",0.6
+"log(TS (mg/L))","log(TP (mg/L))",0.6
+"pH_Grab","log(TP (mg/L))",0.4
+"log(Turbidity (NTU))","log(TP (mg/L))",-0.2
+"log(TSS (mg/L))","log(TP (mg/L))",-0.632455532033676
+"log(BOD (mg/L))","log(TP (mg/L))",-0.6
+"log(cBOD (mg/L))","log(TP (mg/L))",-0.737864787372622
+"log(sCOD (mg/L))","log(TP (mg/L))",-0.8
+"log(COD (mg/L))","log(TP (mg/L))",-0.8
+"log(NH4-N (mg/L))","log(TP (mg/L))",-0.6
+"log(NOx-N (mg/L))","log(TP (mg/L))",0.6
+"log(PO4-P (mg/L))","log(TP (mg/L))",0.8
+"log(TP (mg/L))","log(TP (mg/L))",1
+"log(TOC (mg/L))","log(TP (mg/L))",-0.6
+"log(TN (mg/L))","log(TP (mg/L))",-0.6
+"log(Grab Flow (MLD))","log(TP (mg/L))",-0.4
+"log(Grab Temp (C))","log(TP (mg/L))",0.105409255338946
+"log(Filtered UVT_Grab (%))","log(TP (mg/L))",0.8
+"log(E-coli (MPN/mL))","log(TP (mg/L))",-0.737864787372622
+"log(Fecal (MPN/mL))","log(TP (mg/L))",-0.4
+"Cumulative 3-day pre-sampling-day precip (mm)","log(TP (mg/L))",0.258198889747161
+"log(Mean temp (K))","log(TP (mg/L))",0.6
+"Adeno_logGCpermLsample","log(TOC (mg/L))",0.410241841233154
+"CrAss_logGCpermLsample","log(TOC (mg/L))",-0.237508434398142
+"PMMV_logGCpermLsample","log(TOC (mg/L))",-0.777300330757555
+"uidA_logGCpermLsample","log(TOC (mg/L))",-0.323875137815648
+"log(Raw Flow (MLD))","log(TOC (mg/L))",-1
+"log(TS (mg/L))","log(TOC (mg/L))",-1
+"pH_Grab","log(TOC (mg/L))",-0.4
+"log(Turbidity (NTU))","log(TOC (mg/L))",-0.2
+"log(TSS (mg/L))","log(TOC (mg/L))",0.632455532033676
+"log(BOD (mg/L))","log(TOC (mg/L))",1
+"log(cBOD (mg/L))","log(TOC (mg/L))",0.948683298050514
+"log(sCOD (mg/L))","log(TOC (mg/L))",0.8
+"log(COD (mg/L))","log(TOC (mg/L))",0.8
+"log(NH4-N (mg/L))","log(TOC (mg/L))",1
+"log(NOx-N (mg/L))","log(TOC (mg/L))",-1
+"log(PO4-P (mg/L))","log(TOC (mg/L))",-0.8
+"log(TP (mg/L))","log(TOC (mg/L))",-0.6
+"log(TOC (mg/L))","log(TOC (mg/L))",1
+"log(TN (mg/L))","log(TOC (mg/L))",1
+"log(Grab Flow (MLD))","log(TOC (mg/L))",-0.4
+"log(Grab Temp (C))","log(TOC (mg/L))",-0.316227766016838
+"log(Filtered UVT_Grab (%))","log(TOC (mg/L))",-0.8
+"log(E-coli (MPN/mL))","log(TOC (mg/L))",0.948683298050514
+"log(Fecal (MPN/mL))","log(TOC (mg/L))",0.4
+"Cumulative 3-day pre-sampling-day precip (mm)","log(TOC (mg/L))",-0.774596669241483
+"log(Mean temp (K))","log(TOC (mg/L))",-1
+"Adeno_logGCpermLsample","log(TN (mg/L))",0.410241841233154
+"CrAss_logGCpermLsample","log(TN (mg/L))",-0.237508434398142
+"PMMV_logGCpermLsample","log(TN (mg/L))",-0.777300330757555
+"uidA_logGCpermLsample","log(TN (mg/L))",-0.323875137815648
+"log(Raw Flow (MLD))","log(TN (mg/L))",-1
+"log(TS (mg/L))","log(TN (mg/L))",-1
+"pH_Grab","log(TN (mg/L))",-0.4
+"log(Turbidity (NTU))","log(TN (mg/L))",-0.2
+"log(TSS (mg/L))","log(TN (mg/L))",0.632455532033676
+"log(BOD (mg/L))","log(TN (mg/L))",1
+"log(cBOD (mg/L))","log(TN (mg/L))",0.948683298050514
+"log(sCOD (mg/L))","log(TN (mg/L))",0.8
+"log(COD (mg/L))","log(TN (mg/L))",0.8
+"log(NH4-N (mg/L))","log(TN (mg/L))",1
+"log(NOx-N (mg/L))","log(TN (mg/L))",-1
+"log(PO4-P (mg/L))","log(TN (mg/L))",-0.8
+"log(TP (mg/L))","log(TN (mg/L))",-0.6
+"log(TOC (mg/L))","log(TN (mg/L))",1
+"log(TN (mg/L))","log(TN (mg/L))",1
+"log(Grab Flow (MLD))","log(TN (mg/L))",-0.4
+"log(Grab Temp (C))","log(TN (mg/L))",-0.316227766016838
+"log(Filtered UVT_Grab (%))","log(TN (mg/L))",-0.8
+"log(E-coli (MPN/mL))","log(TN (mg/L))",0.948683298050514
+"log(Fecal (MPN/mL))","log(TN (mg/L))",0.4
+"Cumulative 3-day pre-sampling-day precip (mm)","log(TN (mg/L))",-0.774596669241483
+"log(Mean temp (K))","log(TN (mg/L))",-1
+"Adeno_logGCpermLsample","log(Grab Flow (MLD))",0.215916758543765
+"CrAss_logGCpermLsample","log(Grab Flow (MLD))",-0.0863667034175061
+"PMMV_logGCpermLsample","log(Grab Flow (MLD))",0.194325082689389
+"uidA_logGCpermLsample","log(Grab Flow (MLD))",0.388650165378777
+"log(Raw Flow (MLD))","log(Grab Flow (MLD))",0.4
+"log(TS (mg/L))","log(Grab Flow (MLD))",0.4
+"pH_Grab","log(Grab Flow (MLD))",0.4
+"log(Turbidity (NTU))","log(Grab Flow (MLD))",0.8
+"log(TSS (mg/L))","log(Grab Flow (MLD))",0.316227766016838
+"log(BOD (mg/L))","log(Grab Flow (MLD))",-0.4
+"log(cBOD (mg/L))","log(Grab Flow (MLD))",-0.316227766016838
+"log(sCOD (mg/L))","log(Grab Flow (MLD))",-0.2
+"log(COD (mg/L))","log(Grab Flow (MLD))",-0.2
+"log(NH4-N (mg/L))","log(Grab Flow (MLD))",-0.4
+"log(NOx-N (mg/L))","log(Grab Flow (MLD))",0.4
+"log(PO4-P (mg/L))","log(Grab Flow (MLD))",-0.2
+"log(TP (mg/L))","log(Grab Flow (MLD))",-0.4
+"log(TOC (mg/L))","log(Grab Flow (MLD))",-0.4
+"log(TN (mg/L))","log(Grab Flow (MLD))",-0.4
+"log(Grab Flow (MLD))","log(Grab Flow (MLD))",1
+"log(Grab Temp (C))","log(Grab Flow (MLD))",-0.210818510677892
+"log(Filtered UVT_Grab (%))","log(Grab Flow (MLD))",0.2
+"log(E-coli (MPN/mL))","log(Grab Flow (MLD))",-0.105409255338946
+"log(Fecal (MPN/mL))","log(Grab Flow (MLD))",0.4
+"Cumulative 3-day pre-sampling-day precip (mm)","log(Grab Flow (MLD))",0.774596669241483
+"log(Mean temp (K))","log(Grab Flow (MLD))",0.4
+"Adeno_logGCpermLsample","log(Grab Temp (C))",-0.853485927498649
+"CrAss_logGCpermLsample","log(Grab Temp (C))",0.921764801698541
+"PMMV_logGCpermLsample","log(Grab Temp (C))",-0.204836622599676
+"uidA_logGCpermLsample","log(Grab Temp (C))",0.716928179098865
+"log(Raw Flow (MLD))","log(Grab Temp (C))",0.316227766016838
+"log(TS (mg/L))","log(Grab Temp (C))",0.316227766016838
+"pH_Grab","log(Grab Temp (C))",-0.737864787372622
+"log(Turbidity (NTU))","log(Grab Temp (C))",-0.737864787372622
+"log(TSS (mg/L))","log(Grab Temp (C))",-0.833333333333333
+"log(BOD (mg/L))","log(Grab Temp (C))",-0.316227766016838
+"log(cBOD (mg/L))","log(Grab Temp (C))",-0.0555555555555556
+"log(sCOD (mg/L))","log(Grab Temp (C))",0.210818510677892
+"log(COD (mg/L))","log(Grab Temp (C))",0.210818510677892
+"log(NH4-N (mg/L))","log(Grab Temp (C))",-0.316227766016838
+"log(NOx-N (mg/L))","log(Grab Temp (C))",0.316227766016838
+"log(PO4-P (mg/L))","log(Grab Temp (C))",0.632455532033676
+"log(TP (mg/L))","log(Grab Temp (C))",0.105409255338946
+"log(TOC (mg/L))","log(Grab Temp (C))",-0.316227766016838
+"log(TN (mg/L))","log(Grab Temp (C))",-0.316227766016838
+"log(Grab Flow (MLD))","log(Grab Temp (C))",-0.210818510677892
+"log(Grab Temp (C))","log(Grab Temp (C))",1
+"log(Filtered UVT_Grab (%))","log(Grab Temp (C))",-0.210818510677892
+"log(E-coli (MPN/mL))","log(Grab Temp (C))",-0.5
+"log(Fecal (MPN/mL))","log(Grab Temp (C))",-0.948683298050514
+"Cumulative 3-day pre-sampling-day precip (mm)","log(Grab Temp (C))",-0.272165526975909
+"log(Mean temp (K))","log(Grab Temp (C))",0.316227766016838
+"Adeno_logGCpermLsample","log(Filtered UVT_Grab (%))",0
+"CrAss_logGCpermLsample","log(Filtered UVT_Grab (%))",-0.302283461961271
+"PMMV_logGCpermLsample","log(Filtered UVT_Grab (%))",0.971625413446944
+"uidA_logGCpermLsample","log(Filtered UVT_Grab (%))",-0.259100110252518
+"log(Raw Flow (MLD))","log(Filtered UVT_Grab (%))",0.8
+"log(TS (mg/L))","log(Filtered UVT_Grab (%))",0.8
+"pH_Grab","log(Filtered UVT_Grab (%))",0.8
+"log(Turbidity (NTU))","log(Filtered UVT_Grab (%))",0.4
+"log(TSS (mg/L))","log(Filtered UVT_Grab (%))",-0.316227766016838
+"log(BOD (mg/L))","log(Filtered UVT_Grab (%))",-0.8
+"log(cBOD (mg/L))","log(Filtered UVT_Grab (%))",-0.948683298050514
+"log(sCOD (mg/L))","log(Filtered UVT_Grab (%))",-1
+"log(COD (mg/L))","log(Filtered UVT_Grab (%))",-1
+"log(NH4-N (mg/L))","log(Filtered UVT_Grab (%))",-0.8
+"log(NOx-N (mg/L))","log(Filtered UVT_Grab (%))",0.8
+"log(PO4-P (mg/L))","log(Filtered UVT_Grab (%))",0.6
+"log(TP (mg/L))","log(Filtered UVT_Grab (%))",0.8
+"log(TOC (mg/L))","log(Filtered UVT_Grab (%))",-0.8
+"log(TN (mg/L))","log(Filtered UVT_Grab (%))",-0.8
+"log(Grab Flow (MLD))","log(Filtered UVT_Grab (%))",0.2
+"log(Grab Temp (C))","log(Filtered UVT_Grab (%))",-0.210818510677892
+"log(Filtered UVT_Grab (%))","log(Filtered UVT_Grab (%))",1
+"log(E-coli (MPN/mL))","log(Filtered UVT_Grab (%))",-0.737864787372622
+"log(Fecal (MPN/mL))","log(Filtered UVT_Grab (%))",0
+"Cumulative 3-day pre-sampling-day precip (mm)","log(Filtered UVT_Grab (%))",0.774596669241483
+"log(Mean temp (K))","log(Filtered UVT_Grab (%))",0.8
+"Adeno_logGCpermLsample","log(E-coli (MPN/mL))",0.580370430699081
+"CrAss_logGCpermLsample","log(E-coli (MPN/mL))",-0.375533808099405
+"PMMV_logGCpermLsample","log(E-coli (MPN/mL))",-0.716928179098865
+"uidA_logGCpermLsample","log(E-coli (MPN/mL))",-0.307254933899514
+"log(Raw Flow (MLD))","log(E-coli (MPN/mL))",-0.948683298050514
+"log(TS (mg/L))","log(E-coli (MPN/mL))",-0.948683298050514
+"pH_Grab","log(E-coli (MPN/mL))",-0.210818510677892
+"log(Turbidity (NTU))","log(E-coli (MPN/mL))",0.105409255338946
+"log(TSS (mg/L))","log(E-coli (MPN/mL))",0.833333333333333
+"log(BOD (mg/L))","log(E-coli (MPN/mL))",0.948683298050514
+"log(cBOD (mg/L))","log(E-coli (MPN/mL))",0.888888888888889
+"log(sCOD (mg/L))","log(E-coli (MPN/mL))",0.737864787372622
+"log(COD (mg/L))","log(E-coli (MPN/mL))",0.737864787372622
+"log(NH4-N (mg/L))","log(E-coli (MPN/mL))",0.948683298050514
+"log(NOx-N (mg/L))","log(E-coli (MPN/mL))",-0.948683298050514
+"log(PO4-P (mg/L))","log(E-coli (MPN/mL))",-0.948683298050514
+"log(TP (mg/L))","log(E-coli (MPN/mL))",-0.737864787372622
+"log(TOC (mg/L))","log(E-coli (MPN/mL))",0.948683298050514
+"log(TN (mg/L))","log(E-coli (MPN/mL))",0.948683298050514
+"log(Grab Flow (MLD))","log(E-coli (MPN/mL))",-0.105409255338946
+"log(Grab Temp (C))","log(E-coli (MPN/mL))",-0.5
+"log(Filtered UVT_Grab (%))","log(E-coli (MPN/mL))",-0.737864787372622
+"log(E-coli (MPN/mL))","log(E-coli (MPN/mL))",1
+"log(Fecal (MPN/mL))","log(E-coli (MPN/mL))",0.632455532033676
+"Cumulative 3-day pre-sampling-day precip (mm)","log(E-coli (MPN/mL))",-0.544331053951817
+"log(Mean temp (K))","log(E-coli (MPN/mL))",-0.948683298050514
+"Adeno_logGCpermLsample","log(Fecal (MPN/mL))",0.863667034175061
+"CrAss_logGCpermLsample","log(Fecal (MPN/mL))",-0.820483682466308
+"PMMV_logGCpermLsample","log(Fecal (MPN/mL))",0
+"uidA_logGCpermLsample","log(Fecal (MPN/mL))",-0.518200220505037
+"log(Raw Flow (MLD))","log(Fecal (MPN/mL))",-0.4
+"log(TS (mg/L))","log(Fecal (MPN/mL))",-0.4
+"pH_Grab","log(Fecal (MPN/mL))",0.6
+"log(Turbidity (NTU))","log(Fecal (MPN/mL))",0.8
+"log(TSS (mg/L))","log(Fecal (MPN/mL))",0.948683298050514
+"log(BOD (mg/L))","log(Fecal (MPN/mL))",0.4
+"log(cBOD (mg/L))","log(Fecal (MPN/mL))",0.210818510677892
+"log(sCOD (mg/L))","log(Fecal (MPN/mL))",0
+"log(COD (mg/L))","log(Fecal (MPN/mL))",0
+"log(NH4-N (mg/L))","log(Fecal (MPN/mL))",0.4
+"log(NOx-N (mg/L))","log(Fecal (MPN/mL))",-0.4
+"log(PO4-P (mg/L))","log(Fecal (MPN/mL))",-0.8
+"log(TP (mg/L))","log(Fecal (MPN/mL))",-0.4
+"log(TOC (mg/L))","log(Fecal (MPN/mL))",0.4
+"log(TN (mg/L))","log(Fecal (MPN/mL))",0.4
+"log(Grab Flow (MLD))","log(Fecal (MPN/mL))",0.4
+"log(Grab Temp (C))","log(Fecal (MPN/mL))",-0.948683298050514
+"log(Filtered UVT_Grab (%))","log(Fecal (MPN/mL))",0
+"log(E-coli (MPN/mL))","log(Fecal (MPN/mL))",0.632455532033676
+"log(Fecal (MPN/mL))","log(Fecal (MPN/mL))",1
+"Cumulative 3-day pre-sampling-day precip (mm)","log(Fecal (MPN/mL))",0.258198889747161
+"log(Mean temp (K))","log(Fecal (MPN/mL))",-0.4
+"Adeno_logGCpermLsample","Cumulative 3-day pre-sampling-day precip (mm)",0.139373668334515
+"CrAss_logGCpermLsample","Cumulative 3-day pre-sampling-day precip (mm)",-0.250872603002127
+"PMMV_logGCpermLsample","Cumulative 3-day pre-sampling-day precip (mm)",0.752617809006382
+"uidA_logGCpermLsample","Cumulative 3-day pre-sampling-day precip (mm)",0.0836242010007091
+"log(Raw Flow (MLD))","Cumulative 3-day pre-sampling-day precip (mm)",0.774596669241483
+"log(TS (mg/L))","Cumulative 3-day pre-sampling-day precip (mm)",0.774596669241483
+"pH_Grab","Cumulative 3-day pre-sampling-day precip (mm)",0.774596669241483
+"log(Turbidity (NTU))","Cumulative 3-day pre-sampling-day precip (mm)",0.774596669241483
+"log(TSS (mg/L))","Cumulative 3-day pre-sampling-day precip (mm)",0
+"log(BOD (mg/L))","Cumulative 3-day pre-sampling-day precip (mm)",-0.774596669241483
+"log(cBOD (mg/L))","Cumulative 3-day pre-sampling-day precip (mm)",-0.816496580927726
+"log(sCOD (mg/L))","Cumulative 3-day pre-sampling-day precip (mm)",-0.774596669241483
+"log(COD (mg/L))","Cumulative 3-day pre-sampling-day precip (mm)",-0.774596669241483
+"log(NH4-N (mg/L))","Cumulative 3-day pre-sampling-day precip (mm)",-0.774596669241483
+"log(NOx-N (mg/L))","Cumulative 3-day pre-sampling-day precip (mm)",0.774596669241483
+"log(PO4-P (mg/L))","Cumulative 3-day pre-sampling-day precip (mm)",0.258198889747161
+"log(TP (mg/L))","Cumulative 3-day pre-sampling-day precip (mm)",0.258198889747161
+"log(TOC (mg/L))","Cumulative 3-day pre-sampling-day precip (mm)",-0.774596669241483
+"log(TN (mg/L))","Cumulative 3-day pre-sampling-day precip (mm)",-0.774596669241483
+"log(Grab Flow (MLD))","Cumulative 3-day pre-sampling-day precip (mm)",0.774596669241483
+"log(Grab Temp (C))","Cumulative 3-day pre-sampling-day precip (mm)",-0.272165526975909
+"log(Filtered UVT_Grab (%))","Cumulative 3-day pre-sampling-day precip (mm)",0.774596669241483
+"log(E-coli (MPN/mL))","Cumulative 3-day pre-sampling-day precip (mm)",-0.544331053951817
+"log(Fecal (MPN/mL))","Cumulative 3-day pre-sampling-day precip (mm)",0.258198889747161
+"Cumulative 3-day pre-sampling-day precip (mm)","Cumulative 3-day pre-sampling-day precip (mm)",1
+"log(Mean temp (K))","Cumulative 3-day pre-sampling-day precip (mm)",0.774596669241483
+"Adeno_logGCpermLsample","log(Mean temp (K))",-0.410241841233154
+"CrAss_logGCpermLsample","log(Mean temp (K))",0.237508434398142
+"PMMV_logGCpermLsample","log(Mean temp (K))",0.777300330757555
+"uidA_logGCpermLsample","log(Mean temp (K))",0.323875137815648
+"log(Raw Flow (MLD))","log(Mean temp (K))",1
+"log(TS (mg/L))","log(Mean temp (K))",1
+"pH_Grab","log(Mean temp (K))",0.4
+"log(Turbidity (NTU))","log(Mean temp (K))",0.2
+"log(TSS (mg/L))","log(Mean temp (K))",-0.632455532033676
+"log(BOD (mg/L))","log(Mean temp (K))",-1
+"log(cBOD (mg/L))","log(Mean temp (K))",-0.948683298050514
+"log(sCOD (mg/L))","log(Mean temp (K))",-0.8
+"log(COD (mg/L))","log(Mean temp (K))",-0.8
+"log(NH4-N (mg/L))","log(Mean temp (K))",-1
+"log(NOx-N (mg/L))","log(Mean temp (K))",1
+"log(PO4-P (mg/L))","log(Mean temp (K))",0.8
+"log(TP (mg/L))","log(Mean temp (K))",0.6
+"log(TOC (mg/L))","log(Mean temp (K))",-1
+"log(TN (mg/L))","log(Mean temp (K))",-1
+"log(Grab Flow (MLD))","log(Mean temp (K))",0.4
+"log(Grab Temp (C))","log(Mean temp (K))",0.316227766016838
+"log(Filtered UVT_Grab (%))","log(Mean temp (K))",0.8
+"log(E-coli (MPN/mL))","log(Mean temp (K))",-0.948683298050514
+"log(Fecal (MPN/mL))","log(Mean temp (K))",-0.4
+"Cumulative 3-day pre-sampling-day precip (mm)","log(Mean temp (K))",0.774596669241483
+"log(Mean temp (K))","log(Mean temp (K))",1

@@ -1,0 +1,306 @@
+# This script is written to perform the equivalent of SAS's PROG GLM (General Linear Models, not to be confused with Generalized Linear Models).
+# It can also give estimate pairwise difference.
+# The script outputs several .txt files organized by assay. For each assay, there will be 2 GC-per-mL files (GLM, PDIFF) and 2 GC-per-ng files.
+# The datasets used in this script are from Jhannelle's qPCR runs of samples from the first sampling event (May 2021).
+
+
+install.packages("sasLM") # Contains the GLM function which performs the core function of SAS PROC GLM. Also contains PDIFF for pairwise difference.
+install.packages("readxl") # Imports Excel files (xls/xlsx) into R w/o external dependencies.
+install.packages("dplyr") # Data cleaning.
+install.packages("ggplot2") # Data visualization.
+install.packages("rstudioapi") # Needed to set working directory to whatever folder that's containing this script.
+install.packages("devtools") # In development - Map-building.
+devtools::install_github("ropenscilabs/rnaturalearth") # In development - Map-building.
+devtools::install_github("ropenscilabs/rnaturalearthdata") # In development - Map-building.
+install.packages("rnaturalearthhires", repos = "http://packages.ropensci.org", type = "source") # In development - Map-building.
+
+library(sasLM)
+library(readxl)
+library(dplyr)
+library(ggplot2)
+library(rstudioapi)
+library(rnaturalearth)
+library(sp)
+
+
+setwd(dirname(getActiveDocumentContext()$path)) # IMPORTANT - Set working directory to whatever folder that's containing this script.
+
+
+# Some boxplot aesthetics to be used for all boxplots:
+boxplot_theme <- theme(plot.title = element_text(size = 16, face = "bold", hjust = 0.5, vjust = 3.5), #hjust = 0.5 to center horizontally.
+                       plot.margin = margin(1, 1, 1, 1, "cm"),
+                       panel.background = element_rect(fill = 'white'),
+                       panel.grid.major = element_line(color = 'grey95'),
+                       panel.grid.major.x = element_blank(),
+                       axis.title.x = element_text(size = 14, vjust = -1),
+                       axis.title.y = element_text(size = 14, vjust = 2.5),
+                       axis.text.x = element_text(size = 10),
+                       axis.text.y = element_text(size = 10),
+                       axis.line = element_line(color = 'black'),
+                       legend.title = element_text(size = 14, face = "bold"),
+                       legend.text = element_text(size = 10.5),
+                       legend.key = element_blank())
+
+################################################################################
+# Playing around with mapping - Plan is to map co-ordinates of sampling sites to map of Manitoba. 
+sp::plot(ne_states(country = 'canada')) # Maps all the provinces of Canada.
+
+
+
+# 16S:
+qPCR_16S <- read_excel("Excel_analyses/qPCR_16S_v3.xls")
+qPCR_16S_GCpermL <- qPCR_16S %>%
+  subset(select = c('Site','log(GC per mL sample)')) %>%
+  rename('logGCpermL' = 'log(GC per mL sample)',
+         'site' = 'Site') 
+
+qPCR_16S_GCpermL_GLM <- GLM(logGCpermL~site,qPCR_16S_GCpermL,lsm=T) # GC per mL. Set lsm=T to get Least Square Means table.
+capture.output(qPCR_16S_GCpermL_GLM, file = 'R_analyses_output/qPCR_16S/qPCR_16S_GCpermL_GLM.txt') # Export results.
+qPCR_16S_GCpermL_PDIFF <- PDIFF(logGCpermL~site,qPCR_16S_GCpermL) # Estimate pairwise difference. Set argument PLOT=T for diffogram.
+capture.output(qPCR_16S_GCpermL_PDIFF, file = 'R_analyses_output/qPCR_16S/qPCR_16S_GCpermL_PDIFF.txt') # Export results.
+
+
+qPCR_16S_GCperng <- qPCR_16S %>%
+  subset(select = c('Site', 'GC per ng', 'log(GC per ng)')) %>% # Also selecting the non-normalized values for the boxplots.
+  rename('GCperng' = 'GC per ng',
+         'logGCperng' = 'log(GC per ng)',
+         'site' = 'Site')  
+
+qPCR_16S_GCperng_GLM <- GLM(logGCperng~site,qPCR_16S_GCperng,lsm=T) # GC per ng. Set lsm=T to get Least Square Means table.
+capture.output(qPCR_16S_GCperng_GLM, file = 'R_analyses_output/qPCR_16S/qPCR_16S_GCperng_GLM.txt') # Export results.
+qPCR_16S_GCperng_PDIFF <- PDIFF(logGCperng~site,qPCR_16S_GCperng) # Estimate pairwise difference. Set argument PLOT=T for diffogram.
+capture.output(qPCR_16S_GCperng_PDIFF, file = 'R_analyses_output/qPCR_16S/qPCR_16S_GCperng_PDIFF.txt') # Export results.
+
+## Boxplots:
+qPCR_16S_GCpermL$site <- factor(qPCR_16S_GCpermL$site,levels = c(1:11,"Negative control")) # Reorder sites from 1-10-11-2-3-4...-Neg to 1-2-3...-10-11-Neg on x-axis.
+pdf("R_analyses_output/qPCR_16S/qPCR_16S_GCpermL_boxplot.pdf", width = 13, height = 8) # Create the pdf output file.
+qPCR_16S_GCpermL_boxplot <- ggplot(qPCR_16S_GCpermL, aes(x = site, y = logGCpermL, fill = site)) + 
+  geom_boxplot() +
+  geom_jitter(color = 'black', size = 1.5, width = 0.2, height = 0) +
+  scale_fill_discrete(limits = c(1:11,"Negative control")) + # Reorder sites in legend.
+  labs(title = "Normalized GC per mL sample by site, 16S", x = "Site", y = "log(GC per mL sample)", fill = "Site") +
+  boxplot_theme
+print(qPCR_16S_GCpermL_boxplot)
+dev.off() # Tells R you're done adding content to the pdf file.
+
+qPCR_16S_GCperng$site <- factor(qPCR_16S_GCperng$site,levels = c(1:11,"Negative control")) # Reorder sites from 1-10-11-2-3-4...-Neg to 1-2-3...-10-11-Neg on x-axis.
+pdf("R_analyses_output/qPCR_16S/qPCR_16S_GCperng_boxplot.pdf", width = 13, height = 8) # Create the pdf output file.
+qPCR_16S_GCperng_boxplot <- ggplot(qPCR_16S_GCperng, aes(x = site, y = GCperng, fill = site)) + 
+  geom_boxplot() +
+  geom_jitter(color = 'black', size = 1.5, width = 0.2, height = 0) +
+  scale_fill_discrete(limits = c(1:11,"Negative control")) + # Reorder sites in legend.
+  labs(title = "GC per ng by site, 16S", x = "Site", y = "GC per ng", fill = "Site") +
+  boxplot_theme
+print(qPCR_16S_GCperng_boxplot)
+dev.off() # Tells R you're done adding content to the pdf file.
+
+
+
+# Adeno:
+qPCR_Adeno_CrAss <- read_excel("Excel_analyses/qPCR_Adeno_crAss_v2.xls")
+qPCR_Adeno_GCpermL <- qPCR_Adeno_CrAss %>%
+  subset(Probe == 'Adeno') %>% # Duplex qPCR, so keep only Adeno results.
+  subset(select = c('Site', 'GC per mL sample', 'log(GC per mL sample)')) %>% # Also selecting the non-normalized values for the boxplots.
+  rename('GCpermL' = 'GC per mL sample',
+         'logGCpermL' = 'log(GC per mL sample)',
+         'site' = 'Site') 
+
+qPCR_Adeno_GCpermL_GLM <- GLM(logGCpermL~site,qPCR_Adeno_GCpermL,lsm=T) # GC per mL. Set lsm=T to get Least Square Means table.
+capture.output(qPCR_Adeno_GCpermL_GLM, file = 'R_analyses_output/qPCR_Adeno/qPCR_Adeno_GCpermL_GLM.txt') # Export results.
+qPCR_Adeno_GCpermL_PDIFF <- PDIFF(logGCpermL~site,qPCR_Adeno_GCpermL) # Estimate pairwise difference. Set argument PLOT=T for diffogram.
+capture.output(qPCR_Adeno_GCpermL_PDIFF, file = 'R_analyses_output/qPCR_Adeno/qPCR_Adeno_GCpermL_PDIFF.txt') # Export results.
+
+
+qPCR_Adeno_GCperng <- qPCR_Adeno_CrAss %>%
+  subset(select = c('Site','log(GC per ng)')) %>%
+  na.omit() %>%
+  rename('logGCperng' = 'log(GC per ng)',
+         'site' = 'Site') 
+
+qPCR_Adeno_GCperng_GLM <- GLM(logGCperng~site,qPCR_Adeno_GCperng,lsm=T) # GC per mL. Set lsm=T to get Least Square Means table.
+capture.output(qPCR_Adeno_GCperng_GLM, file = 'R_analyses_output/qPCR_Adeno/qPCR_Adeno_GCperng_GLM.txt') # Export results.
+qPCR_Adeno_GCperng_PDIFF <- PDIFF(logGCperng~site,qPCR_Adeno_GCperng) # Estimate pairwise difference. Set argument PLOT=T for diffogram.
+capture.output(qPCR_Adeno_GCperng_PDIFF, file = 'R_analyses_output/qPCR_Adeno/qPCR_Adeno_GCperng_PDIFF.txt') # Export results.
+
+## Boxplots:
+qPCR_Adeno_GCpermL$site <- factor(qPCR_Adeno_GCpermL$site,levels = c(1:11,"Negative control")) # Reorder sites from 1-10-11-2-3-4...-Neg to 1-2-3...-10-11-Neg on x-axis.
+pdf("R_analyses_output/qPCR_Adeno/qPCR_Adeno_GCpermL_boxplot.pdf", width = 13, height = 8) # Create the pdf output file.
+qPCR_Adeno_GCpermL_boxplot <- ggplot(qPCR_Adeno_GCpermL, aes(x = site, y = GCpermL, fill = site)) + 
+  geom_boxplot() +
+  geom_jitter(color = 'black', size = 1.5, width = 0.2, height = 0) +
+  scale_fill_discrete(limits = c(1:11,"Negative control")) + # Reorder sites in legend.
+  labs(title = "GC per mL sample by site, Adeno", x = "Site", y = "GC per mL sample", fill = "Site") +
+  boxplot_theme
+print(qPCR_Adeno_GCpermL_boxplot)
+dev.off() # Tells R you're done adding content to the pdf file.
+
+qPCR_Adeno_GCperng$site <- factor(qPCR_Adeno_GCperng$site,levels = c(1:11,"Negative control")) # Reorder sites from 1-10-11-2-3-4...-Neg to 1-2-3...-10-11-Neg on x-axis.
+pdf("R_analyses_output/qPCR_Adeno/qPCR_Adeno_GCperng_boxplot.pdf", width = 13, height = 8) # Create the pdf output file.
+qPCR_Adeno_GCperng_boxplot <- ggplot(qPCR_Adeno_GCperng, aes(x = site, y = logGCperng, fill = site)) + 
+  geom_boxplot() +
+  geom_jitter(color = 'black', size = 1.5, width = 0.2, height = 0) +
+  scale_fill_discrete(limits = c(1:11,"Negative control")) + # Reorder sites in legend.
+  labs(title = "Normalized GC per ng by site, Adeno", x = "Site", y = "log(GC per ng)", fill = "Site") +
+  boxplot_theme
+print(qPCR_Adeno_GCperng_boxplot)
+dev.off() # Tells R you're done adding content to the pdf file.
+
+
+
+# CrAss:
+qPCR_CrAss_GCpermL <- qPCR_Adeno_CrAss %>%
+  subset(Probe == 'CrAss') %>% # Duplex qPCR, so keep only CrAss results.
+  subset(select = c('Site', 'GC per mL sample', 'log(GC per mL sample)')) %>% # Also selecting the non-normalized values for the boxplots.
+  rename('GCpermL' = 'GC per mL sample',
+         'logGCpermL' = 'log(GC per mL sample)',
+         'site' = 'Site') 
+
+qPCR_CrAss_GCpermL_GLM <- GLM(logGCpermL~site,qPCR_CrAss_GCpermL,lsm=T) # GC per mL. Set lsm=T to get Least Square Means table.
+capture.output(qPCR_CrAss_GCpermL_GLM, file = 'R_analyses_output/qPCR_CrAss/qPCR_CrAss_GCpermL_GLM.txt') # Export results.
+qPCR_CrAss_GCpermL_PDIFF <- PDIFF(logGCpermL~site,qPCR_CrAss_GCpermL) # Estimate pairwise difference. Set argument PLOT=T for diffogram.
+capture.output(qPCR_CrAss_GCpermL_PDIFF, file = 'R_analyses_output/qPCR_CrAss/qPCR_CrAss_GCpermL_PDIFF.txt') # Export results.
+
+
+qPCR_CrAss_GCperng <- qPCR_Adeno_CrAss %>%
+  subset(select = c('Site','log(GC per ng)')) %>%
+  rename('logGCperng' = 'log(GC per ng)',
+         'site' = 'Site') 
+
+qPCR_CrAss_GCperng_GLM <- GLM(logGCperng~site,qPCR_CrAss_GCperng,lsm=T) # GC per mL. Set lsm=T to get Least Square Means table.
+capture.output(qPCR_CrAss_GCperng_GLM, file = 'R_analyses_output/qPCR_CrAss/qPCR_CrAss_GCperng_GLM.txt') # Export results.
+qPCR_CrAss_GCperng_PDIFF <- PDIFF(logGCperng~site,qPCR_CrAss_GCperng) # Estimate pairwise difference. Set argument PLOT=T for diffogram.
+capture.output(qPCR_CrAss_GCperng_PDIFF, file = 'R_analyses_output/qPCR_CrAss/qPCR_CrAss_GCperng_PDIFF.txt') # Export results.
+
+## Boxplots:
+qPCR_CrAss_GCpermL$site <- factor(qPCR_CrAss_GCpermL$site,levels = c(1:11,"Negative control")) # Reorder sites from 1-10-11-2-3-4...-Neg to 1-2-3...-10-11-Neg on x-axis.
+pdf("R_analyses_output/qPCR_CrAss/qPCR_CrAss_GCpermL_boxplot.pdf", width = 13, height = 8) # Create the pdf output file.
+qPCR_CrAss_GCpermL_boxplot <- ggplot(qPCR_CrAss_GCpermL, aes(x = site, y = GCpermL, fill = site)) + 
+                                geom_boxplot() +
+                                geom_jitter(color = 'black', size = 1.5, width = 0.2, height = 0) +
+                                scale_fill_discrete(limits = c(1:11,"Negative control")) + # Reorder sites in legend.
+                                labs(title = "GC per mL sample by site, CrAss", x = "Site", y = "GC per mL sample", fill = "Site") +
+                                boxplot_theme
+print(qPCR_CrAss_GCpermL_boxplot)
+dev.off() # Tells R you're done adding content to the pdf file.
+
+qPCR_CrAss_GCperng$site <- factor(qPCR_CrAss_GCperng$site,levels = c(1:11,"Negative control")) # Reorder sites from 1-10-11-2-3-4...-Neg to 1-2-3...-10-11-Neg on x-axis.
+pdf("R_analyses_output/qPCR_CrAss/qPCR_CrAss_GCperng_boxplot.pdf", width = 13, height = 8) # Create the pdf output file.
+qPCR_CrAss_GCperng_boxplot <- ggplot(qPCR_CrAss_GCperng, aes(x = site, y = logGCperng, fill = site)) + 
+                                  geom_boxplot() +
+                                  geom_jitter(color = 'black', size = 1.5, width = 0.2, height = 0) +
+                                  scale_fill_discrete(limits = c(1:11,"Negative control")) + # Reorder sites in legend.
+                                  labs(title = "Normalized GC per ng by site, CrAss", x = "Site", y = "log(GC per ng)", fill = "Site") +
+                                  boxplot_theme
+print(qPCR_CrAss_GCperng_boxplot)
+dev.off() # Tells R you're done adding content to the pdf file.
+
+
+
+# PMMV:
+qPCR_PMMV <- read_excel("Excel_analyses/qPCR_PMMV_v3.xls")
+qPCR_PMMV_GCpermL <- qPCR_PMMV %>%
+  subset(select = c('Site','log(GC per mL sample)')) %>%
+  rename('logGCpermL' = 'log(GC per mL sample)',
+         'site' = 'Site') 
+
+qPCR_PMMV_GCpermL_GLM <- GLM(logGCpermL~site,qPCR_PMMV_GCpermL,lsm=T) # GC per mL. Set lsm=T to get Least Square Means table.
+capture.output(qPCR_PMMV_GCpermL_GLM, file = 'R_analyses_output/qPCR_PMMV/qPCR_PMMV_GCpermL_GLM.txt') # Export results.
+qPCR_PMMV_GCpermL_PDIFF <- PDIFF(logGCpermL~site,qPCR_PMMV_GCpermL) # Estimate pairwise difference. Set argument PLOT=T for diffogram.
+capture.output(qPCR_PMMV_GCpermL_PDIFF, file = 'R_analyses_output/qPCR_PMMV/qPCR_PMMV_GCpermL_PDIFF.txt') # Export results.
+
+
+qPCR_PMMV_GCperng <- qPCR_PMMV %>%
+  subset(select = c('Site','log(GC per ng)')) %>%
+  rename('logGCperng' = 'log(GC per ng)',
+         'site' = 'Site') 
+
+qPCR_PMMV_GCperng_GLM <- GLM(logGCperng~site,qPCR_PMMV_GCperng,lsm=T) # GC per mL. Set lsm=T to get Least Square Means table.
+capture.output(qPCR_PMMV_GCperng_GLM, file = 'R_analyses_output/qPCR_PMMV/qPCR_PMMV_GCperng_GLM.txt') # Export results.
+qPCR_PMMV_GCperng_PDIFF <- PDIFF(logGCperng~site,qPCR_PMMV_GCperng) # Estimate pairwise difference. Set argument PLOT=T for diffogram.
+capture.output(qPCR_PMMV_GCperng_PDIFF, file = 'R_analyses_output/qPCR_PMMV/qPCR_PMMV_GCperng_PDIFF.txt') # Export results.
+
+## Boxplots:
+qPCR_PMMV_GCpermL$site <- factor(qPCR_PMMV_GCpermL$site,levels = c(1:11,"Negative control")) # Reorder sites from 1-10-11-2-3-4...-Neg to 1-2-3...-10-11-Neg on x-axis.
+pdf("R_analyses_output/qPCR_PMMV/qPCR_PMMV_GCpermL_boxplot.pdf", width = 13, height = 8) # Create the pdf output file.
+qPCR_PMMV_GCpermL_boxplot <- ggplot(qPCR_PMMV_GCpermL, aes(x = site, y = logGCpermL, fill = site)) + 
+                              geom_boxplot() +
+                              geom_jitter(color = 'black', size = 1.5, width = 0.2, height = 0) +
+                              scale_fill_discrete(limits = c(1:11,"Negative control")) + # Reorder sites in legend.
+                              labs(title = "Normalized GC per mL sample by site, PMMV", x = "Site", y = "log(GC per mL sample)", fill = "Site") +
+                              boxplot_theme
+print(qPCR_PMMV_GCpermL_boxplot)
+dev.off() # Tells R you're done adding content to the pdf file.
+
+qPCR_PMMV_GCperng$site <- factor(qPCR_PMMV_GCperng$site,levels = c(1:11,"Negative control")) # Reorder sites from 1-10-11-2-3-4...-Neg to 1-2-3...-10-11-Neg on x-axis.
+pdf("R_analyses_output/qPCR_PMMV/qPCR_PMMV_GCperng_boxplot.pdf", width = 13, height = 8) # Create the pdf output file.
+qPCR_PMMV_GCperng_boxplot <- ggplot(qPCR_PMMV_GCperng, aes(x = site, y = logGCperng, fill = site)) + 
+                              geom_boxplot() +
+                              geom_jitter(color = 'black', size = 1.5, width = 0.2, height = 0) +
+                              scale_fill_discrete(limits = c(1:11,"Negative control")) + # Reorder sites in legend.
+                              labs(title = "Normalized GC per ng by site, PMMV", x = "Site", y = "log(GC per ng)", fill = "Site") +
+                              boxplot_theme
+print(qPCR_PMMV_GCperng_boxplot)
+dev.off() # Tells R you're done adding content to the pdf file.
+
+
+
+# uidA:
+qPCR_uidA <- read_excel("Excel_analyses/qPCR_uidA_v3.xls")
+qPCR_uidA_GCpermL <- qPCR_uidA %>%
+  subset(select = c('Site', 'GC per mL sample', 'log(GC per mL sample)')) %>% # Also selecting the non-normalized values for the boxplots.
+  rename('GCpermL' = 'GC per mL sample',
+         'logGCpermL' = 'log(GC per mL sample)',
+         'site' = 'Site') 
+
+qPCR_uidA_GCpermL_GLM <- GLM(logGCpermL~site,qPCR_uidA_GCpermL,lsm=T) # GC per mL. Set lsm=T to get Least Square Means table.
+capture.output(qPCR_uidA_GCpermL_GLM, file = 'R_analyses_output/qPCR_uidA/qPCR_uidA_GCpermL_GLM.txt') # Export results.
+qPCR_uidA_GCpermL_PDIFF <- PDIFF(logGCpermL~site,qPCR_uidA_GCpermL) # Estimate pairwise difference. Set argument PLOT=T for diffogram.
+capture.output(qPCR_uidA_GCpermL_PDIFF, file = 'R_analyses_output/qPCR_uidA/qPCR_uidA_GCpermL_PDIFF.txt') # Export results.
+
+
+qPCR_uidA_GCperng <- qPCR_uidA %>%
+  subset(select = c('Site', 'GC per ng', 'log(GC per ng)')) %>% # Also selecting the non-normalized values for the boxplots.
+  rename('GCperng' = 'GC per ng',
+         'logGCperng' = 'log(GC per ng)',
+         'site' = 'Site') 
+
+qPCR_uidA_GCperng_GLM <- GLM(logGCperng~site,qPCR_uidA_GCperng,lsm=T) # GC per mL. Set lsm=T to get Least Square Means table.
+capture.output(qPCR_uidA_GCperng_GLM, file = 'R_analyses_output/qPCR_uidA/qPCR_uidA_GCperng_GLM.txt') # Export results.
+qPCR_uidA_GCperng_PDIFF <- PDIFF(logGCperng~site,qPCR_uidA_GCperng) # Estimate pairwise difference. Set argument PLOT=T for diffogram.
+capture.output(qPCR_uidA_GCperng_PDIFF, file = 'R_analyses_output/qPCR_uidA/qPCR_uidA_GCperng_PDIFF.txt') # Export results.
+
+## Boxplots:
+qPCR_uidA_GCpermL$site <- factor(qPCR_uidA_GCpermL$site,levels = c(1:11,"Negative control")) # Reorder sites from 1-10-11-2-3-4...-Neg to 1-2-3...-10-11-Neg on x-axis.
+pdf("R_analyses_output/qPCR_uidA/qPCR_uidA_GCpermL_boxplot.pdf", width = 13, height = 8) # Create the pdf output file.
+qPCR_uidA_GCpermL_boxplot <- ggplot(qPCR_uidA_GCpermL, aes(x = site, y = GCpermL, fill = site)) + 
+                              geom_boxplot() +
+                              geom_jitter(color = 'black', size = 1.5, width = 0.2, height = 0) +
+                              scale_fill_discrete(limits = c(1:11,"Negative control")) + # Reorder sites in legend.
+                              labs(title = "GC per mL sample by site, uidA", x = "Site", y = "GC per mL sample", fill = "Site") +
+                              boxplot_theme
+print(qPCR_uidA_GCpermL_boxplot)
+dev.off() # Tells R you're done adding content to the pdf file.
+
+qPCR_uidA_GCperng$site <- factor(qPCR_uidA_GCperng$site,levels = c(1:11,"Negative control")) # Reorder sites from 1-10-11-2-3-4...-Neg to 1-2-3...-10-11-Neg on x-axis.
+pdf("R_analyses_output/qPCR_uidA/qPCR_uidA_GCperng_boxplot.pdf", width = 13, height = 8) # Create the pdf output file.
+qPCR_uidA_GCperng_boxplot <- ggplot(qPCR_uidA_GCperng, aes(x = site, y = GCperng, fill = site)) + 
+                              geom_boxplot() +
+                              geom_jitter(color = 'black', size = 1.5, width = 0.2, height = 0) +
+                              scale_fill_discrete(limits = c(1:11,"Negative control")) + # Reorder sites in legend.
+                              labs(title = "GC per ng by site, uidA", x = "Site", y = "GC per ng", fill = "Site") +
+                              boxplot_theme
+print(qPCR_uidA_GCperng_boxplot)
+dev.off() # Tells R you're done adding content to the pdf file.
+
+
+
+
+
+
+
+
+
+
+
+
+

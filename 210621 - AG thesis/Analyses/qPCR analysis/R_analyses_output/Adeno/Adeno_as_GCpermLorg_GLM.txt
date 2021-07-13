@@ -1,0 +1,45 @@
+$ANOVA
+Response : logGCpermLorg
+                Df  Sum Sq Mean Sq F value    Pr(>F)    
+MODEL            3 2.95682 0.98561  163.18 1.634e-07 ***
+RESIDUALS        8 0.04832 0.00604                      
+CORRECTED TOTAL 11 3.00514                              
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+$`Type I`
+     Df Sum Sq Mean Sq F value    Pr(>F)    
+time  3 2.9568 0.98561  163.18 1.634e-07 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+$`Type II`
+     Df Sum Sq Mean Sq F value    Pr(>F)    
+time  3 2.9568 0.98561  163.18 1.634e-07 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+$`Type III`
+     Df Sum Sq Mean Sq F value    Pr(>F)    
+time  3 2.9568 0.98561  163.18 1.634e-07 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+$Parameter
+            Estimate Estimable Std. Error Df t value  Pr(>|t|)    
+(Intercept)  0.99814         0   0.044870  8 22.2452 1.763e-08 ***
+timeEvent 1  1.07472         0   0.063456  8 16.9366 1.498e-07 ***
+timeEvent 2  0.57927         0   0.063456  8  9.1288 1.669e-05 ***
+timeEvent 3 -0.18526         0   0.063456  8 -2.9195   0.01931 *  
+timeEvent 4  0.00000         0   0.000000  8                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+$`Least Square Mean`
+               LSmean   LowerCL   UpperCL         SE Df
+(Intercept) 1.3653214 1.3135864 1.4170564 0.02243492  8
+timeEvent 1 2.0728574 1.9693874 2.1763275 0.04486983  8
+timeEvent 2 1.5774117 1.4739417 1.6808817 0.04486983  8
+timeEvent 3 0.8128781 0.7094081 0.9163482 0.04486983  8
+timeEvent 4 0.9981384 0.8946683 1.1016084 0.04486983  8
+

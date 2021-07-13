@@ -1,0 +1,2 @@
+                  Estimate Lower CL Upper CL Std. Error t value Df Pr(>|t|)
+Event 3 - Event 4 -0.03812 -0.19365  0.11741   0.056018 -0.6805  4   0.5335

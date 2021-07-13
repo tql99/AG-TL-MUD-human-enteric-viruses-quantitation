@@ -1,0 +1,45 @@
+$ANOVA
+Response : logGCperngDNA
+                Df Sum Sq Mean Sq F value    Pr(>F)    
+MODEL            3 5.8958  1.9652  40.104 1.195e-08 ***
+RESIDUALS       20 0.9801  0.0490                      
+CORRECTED TOTAL 23 6.8758                              
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+$`Type I`
+       Df Sum Sq Mean Sq F value    Pr(>F)    
+sample  3 5.8958  1.9652  40.104 1.195e-08 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+$`Type II`
+       Df Sum Sq Mean Sq F value    Pr(>F)    
+sample  3 5.8958  1.9652  40.104 1.195e-08 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+$`Type III`
+       Df Sum Sq Mean Sq F value    Pr(>F)    
+sample  3 5.8958  1.9652  40.104 1.195e-08 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+$Parameter
+                       Estimate Estimable Std. Error Df t value  Pr(>|t|)    
+(Intercept)             0.19475         0   0.090374 20  2.1550   0.04353 *  
+sampleActivated Sludge -0.98978         0   0.127807 20 -7.7443 1.918e-07 ***
+sampleEffluents         0.03610         0   0.127807 20  0.2824   0.78052    
+sampleRaw Sewage        0.31963         0   0.127807 20  2.5009   0.02119 *  
+sampleSludge Cake       0.00000         0   0.000000 20                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+$`Least Square Mean`
+                            LSmean      LowerCL    UpperCL         SE Df
+(Intercept)             0.03624074 -0.058017178  0.1304987 0.04518675 20
+sampleActivated Sludge -0.79502686 -0.983542687 -0.6065110 0.09037351 20
+sampleEffluents         0.23085110  0.042335268  0.4193669 0.09037351 20
+sampleRaw Sewage        0.51438405  0.325868224  0.7028999 0.09037351 20
+sampleSludge Cake       0.19475465  0.006238823  0.3832705 0.09037351 20
+

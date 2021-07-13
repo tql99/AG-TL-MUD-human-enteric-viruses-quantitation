@@ -1,0 +1,9 @@
+                               Estimate Lower CL Upper CL Std. Error t value Df  Pr(>|t|)    
+Activated Sludge - Effluents   -0.96099 -1.52610 -0.39588    0.27915 -3.4426 38 0.0014169 ** 
+Activated Sludge - Raw Sewage  -0.40755 -0.97265  0.15756    0.27915 -1.4600 38 0.1525201    
+Activated Sludge - Sludge Cake -1.69699 -2.38910 -1.00488    0.34189 -4.9636 38 1.487e-05 ***
+Effluents - Raw Sewage          0.55344 -0.01166  1.11855    0.27915  1.9826 38 0.0546749 .  
+Effluents - Sludge Cake        -0.73600 -1.42811 -0.04389    0.34189 -2.1528 38 0.0377500 *  
+Raw Sewage - Sludge Cake       -1.28944 -1.98156 -0.59733    0.34189 -3.7716 38 0.0005526 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
