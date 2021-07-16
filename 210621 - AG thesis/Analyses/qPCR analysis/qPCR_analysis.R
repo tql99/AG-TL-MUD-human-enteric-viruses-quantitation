@@ -12,7 +12,8 @@ install.packages("dplyr") # Data cleaning.
 install.packages("rstudioapi") # Needed to set working directory using "getActiveDocumentContext()" function.
 install_github("vqv/ggbiplot") # Visualize PCA. If can't install package, load library(devtools) first.
 install.packages("Hmisc") # Needed for (Spearman's) correlation analyses.
-install.packages("reshape2") # Melt correlation matrix to visualize it.
+install.packages("reshape2") # Melts correlation matrix to visualize it.
+install.packages("ggrepel") # Contains function to point label to datapoint's new jittered position.
 
 library(sasLM)
 library(readxl)
@@ -22,6 +23,7 @@ library(devtools)
 library(ggbiplot)
 library(Hmisc)
 library(reshape2)
+library(ggrepel)
 
 
 setwd(dirname(getActiveDocumentContext()$path)) # IMPORTANT - Set working directory to whatever folder that's containing this script.
@@ -877,3 +879,19 @@ write.csv(eff_Spearman_out_coeff_melted, "R_analyses_output/Spearman/eff_Spearma
 eff_Spearman_out_P <- eff_Spearman_out$P # Extract p-values.
 eff_Spearman_out_P_melted <- melt(eff_Spearman_out_P) # Creates an output w/ 3 cols (var1, var2, val) that can be used as input for other data-handling applications, e.g., Tableau.
 write.csv(eff_Spearman_out_P_melted, "R_analyses_output/Spearman/eff_Spearman_out_P_melted.csv", row.names= F)
+
+
+
+# Scatterplot comparing E. coli & uidA counts in terms of sample for RS & EF:
+uidA_Ecoli_RS_EF <- read_excel('Excel_analyses/uidA_Ecoli_RS_EF.xlsx')
+uidA_Ecoli_RS_EF <- rename(uidA_Ecoli_RS_EF, 
+                           c('E. coli (MPN/mL)' = 'Ecoli', 
+                             'uidA (GCN/mL sample)' = 'uidA'))
+uidA_Ecoli_RS_EF_scatterplot <- ggplot(uidA_Ecoli_RS_EF, aes(x = uidA, y = Ecoli, color = Source, label = Event)) +
+                                geom_jitter(size = 2.5) + 
+                                geom_label_repel() + 
+                                labs(x = "uidA (GCN per mL of sample)", y = "E. coli (MPN per mL)") + 
+                                theme(legend.title = element_text(face = "bold"),
+                                      axis.title.x = element_text(face = "bold"),
+                                      axis.title.y = element_text(face = "bold"))
+
