@@ -13,7 +13,7 @@ install.packages("rstudioapi") # Needed to set working directory using "getActiv
 install_github("vqv/ggbiplot") # Visualize PCA. If can't install package, load library(devtools) first.
 install.packages("Hmisc") # Needed for (Spearman's) correlation analyses.
 install.packages("reshape2") # Melts correlation matrix to visualize it.
-install.packages("ggrepel") # Contains function to point label to datapoint's new jittered position.
+
 
 library(sasLM)
 library(readxl)
@@ -23,7 +23,6 @@ library(devtools)
 library(ggbiplot)
 library(Hmisc)
 library(reshape2)
-library(ggrepel)
 
 
 setwd(dirname(getActiveDocumentContext()$path)) # IMPORTANT - Set working directory to whatever folder that's containing this script.
@@ -619,17 +618,7 @@ capture.output(PMMV_GCperngRNA_treatment_PDIFF, file = 'R_analyses_output/PMMV/P
 
 # Rota:
 Rota <- read_excel('Excel_analyses/Rota.xls') %>%
-  subset(select = c('Sample', 'Time', 'GC per mL or g sample', 'log(GC per mL or g sample)', 
-                    'GC per ng DNA', 'log(GC per ng DNA)',
-                    'GC per ng RNA', 'log(GC per ng RNA)')) %>% # Keep relevant columns.
-  rename('sample' = 'Sample',
-         'time' = 'Time', 
-         'GCpermLorg' = 'GC per mL or g sample', 
-         'logGCpermLorg' = 'log(GC per mL or g sample)',
-         'GCperngDNA' = 'GC per ng DNA',
-         'logGCperngDNA' = 'log(GC per ng DNA)',
-         'GCperngRNA' = 'GC per ng RNA',
-         'logGCperngRNA' = 'log(GC per ng RNA)')
+  input.cleaning()
 dir.create('R_analyses_output/Rota') # Create folder to contain output files.
 
 ## Effluents:
@@ -732,17 +721,7 @@ capture.output(Rota_GCperngRNA_treatment_PDIFF, file = 'R_analyses_output/Rota/R
 
 # uidA:
 uidA <- read_excel('Excel_analyses/uidA.xls') %>%
-  subset(select = c('Sample', 'Time', 'GC per mL or g sample', 'log(GC per mL or g sample)', 
-                    'GC per ng DNA', 'log(GC per ng DNA)',
-                    'GC per ng RNA', 'log(GC per ng RNA)')) %>% # Keep relevant columns.
-  rename('sample' = 'Sample',
-         'time' = 'Time', 
-         'GCpermLorg' = 'GC per mL or g sample', 
-         'logGCpermLorg' = 'log(GC per mL or g sample)',
-         'GCperngDNA' = 'GC per ng DNA',
-         'logGCperngDNA' = 'log(GC per ng DNA)',
-         'GCperngRNA' = 'GC per ng RNA',
-         'logGCperngRNA' = 'log(GC per ng RNA)')
+  input.cleaning()
 dir.create('R_analyses_output/uidA') # Create folder to contain output files.
 
 ## Effluents:
@@ -846,23 +825,55 @@ capture.output(uidA_GCperngRNA_treatment_PDIFF, file = 'R_analyses_output/uidA/u
 # PCA:
 dir.create('R_analyses_output/PCA') # Create folder to contain output files.
 eff_PCA_in <- read_excel('Excel_analyses/eff_PCA_in.xlsx')
-
 eff_PCA_out <- prcomp(eff_PCA_in[,c(2:ncol(eff_PCA_in))], center = T, scale = T)
 eff_PCA_out_summary <- summary(eff_PCA_out) # Get importance of components.
 capture.output(eff_PCA_out_summary, file = 'R_analyses_output/PCA/eff_PCA_out_summary.txt')
 
-pdf('R_analyses_output/PCA/eff_PCA_out_biplot.pdf', width = 13, height = 8) # Create the pdf output file.
-eff_PCA_out_biplot <- ggbiplot(eff_PCA_out, ellipse = T, groups = as.factor(unique(eff_PCA_in$Time))) +
+
+## Biplots:
+### PC1 vs PC2:
+pdf('R_analyses_output/PCA/eff_PCA_out_biplot_12.pdf', width = 13, height = 8) # Create the pdf output file.
+eff_PCA_out_biplot_12 <- ggbiplot(eff_PCA_out, ellipse = T, groups = as.factor(unique(eff_PCA_in$Time))) +
   geom_text(label = eff_PCA_in$Time, color = 'black', size = 4, position = position_jitter(width = .1, height = .1)) +
   geom_point(shape = 21, colour = 'black', fill = 'black')
-print(eff_PCA_out_biplot)
+print(eff_PCA_out_biplot_12)
 dev.off() # Tell R you're done adding content to the pdf file.
 
-pdf('R_analyses_output/PCA/eff_PCA_out_biplot_noAxes.pdf', width = 13, height = 8) # Create the pdf output file.
-eff_PCA_out_biplot_noAxes <- ggbiplot(eff_PCA_out, ellipse = T, groups = as.factor(unique(eff_PCA_in$Time)), var.axes = F) +
+pdf('R_analyses_output/PCA/eff_PCA_out_biplot_noAxes_12.pdf', width = 13, height = 8) # Create the pdf output file.
+eff_PCA_out_biplot_noAxes_12 <- ggbiplot(eff_PCA_out, ellipse = T, groups = as.factor(unique(eff_PCA_in$Time)), var.axes = F) +
   geom_text(label = eff_PCA_in$Time, color = 'black', size = 4, position = position_jitter(width = .1, height = .1)) +
   geom_point(shape = 21, colour = 'black', fill = 'black') 
-print(eff_PCA_out_biplot_noAxes)
+print(eff_PCA_out_biplot_noAxes_12)
+dev.off() # Tell R you're done adding content to the pdf file.
+
+### PC2 vs PC3:
+pdf('R_analyses_output/PCA/eff_PCA_out_biplot_23.pdf', width = 13, height = 8) # Create the pdf output file.
+eff_PCA_out_biplot_23 <- ggbiplot(eff_PCA_out, choices = c(2,3), ellipse = T, groups = as.factor(unique(eff_PCA_in$Time))) +
+  geom_text(label = eff_PCA_in$Time, color = 'black', size = 4, position = position_jitter(width = .1, height = .1)) +
+  geom_point(shape = 21, colour = 'black', fill = 'black')
+print(eff_PCA_out_biplot_23)
+dev.off() # Tell R you're done adding content to the pdf file.
+
+pdf('R_analyses_output/PCA/eff_PCA_out_biplot_noAxes_23.pdf', width = 13, height = 8) # Create the pdf output file.
+eff_PCA_out_biplot_noAxes_23 <- ggbiplot(eff_PCA_out, choices = c(2,3), ellipse = T, groups = as.factor(unique(eff_PCA_in$Time)), var.axes = F) +
+  geom_text(label = eff_PCA_in$Time, color = 'black', size = 4, position = position_jitter(width = .1, height = .1)) +
+  geom_point(shape = 21, colour = 'black', fill = 'black') 
+print(eff_PCA_out_biplot_noAxes_23)
+dev.off() # Tell R you're done adding content to the pdf file.
+
+### PC1 vs PC3:
+pdf('R_analyses_output/PCA/eff_PCA_out_biplot_13.pdf', width = 13, height = 8) # Create the pdf output file.
+eff_PCA_out_biplot_13 <- ggbiplot(eff_PCA_out, choices = c(1,3), ellipse = T, groups = as.factor(unique(eff_PCA_in$Time))) +
+  geom_text(label = eff_PCA_in$Time, color = 'black', size = 4, position = position_jitter(width = .1, height = .1)) +
+  geom_point(shape = 21, colour = 'black', fill = 'black')
+print(eff_PCA_out_biplot_13)
+dev.off() # Tell R you're done adding content to the pdf file.
+
+pdf('R_analyses_output/PCA/eff_PCA_out_biplot_noAxes_13.pdf', width = 13, height = 8) # Create the pdf output file.
+eff_PCA_out_biplot_noAxes_13 <- ggbiplot(eff_PCA_out, choices = c(1,3), ellipse = T, groups = as.factor(unique(eff_PCA_in$Time)), var.axes = F) +
+  geom_text(label = eff_PCA_in$Time, color = 'black', size = 4, position = position_jitter(width = .1, height = .1)) +
+  geom_point(shape = 21, colour = 'black', fill = 'black') 
+print(eff_PCA_out_biplot_noAxes_13)
 dev.off() # Tell R you're done adding content to the pdf file.
 
 
@@ -880,18 +891,4 @@ eff_Spearman_out_P <- eff_Spearman_out$P # Extract p-values.
 eff_Spearman_out_P_melted <- melt(eff_Spearman_out_P) # Creates an output w/ 3 cols (var1, var2, val) that can be used as input for other data-handling applications, e.g., Tableau.
 write.csv(eff_Spearman_out_P_melted, "R_analyses_output/Spearman/eff_Spearman_out_P_melted.csv", row.names= F)
 
-
-
-# Scatterplot comparing E. coli & uidA counts in terms of sample for RS & EF:
-uidA_Ecoli_RS_EF <- read_excel('Excel_analyses/uidA_Ecoli_RS_EF.xlsx')
-uidA_Ecoli_RS_EF <- rename(uidA_Ecoli_RS_EF, 
-                           c('E. coli (MPN/mL)' = 'Ecoli', 
-                             'uidA (GCN/mL sample)' = 'uidA'))
-uidA_Ecoli_RS_EF_scatterplot <- ggplot(uidA_Ecoli_RS_EF, aes(x = uidA, y = Ecoli, color = Source, label = Event)) +
-                                geom_jitter(size = 2.5) + 
-                                geom_label_repel() + 
-                                labs(x = "uidA (GCN per mL of sample)", y = "E. coli (MPN per mL)") + 
-                                theme(legend.title = element_text(face = "bold"),
-                                      axis.title.x = element_text(face = "bold"),
-                                      axis.title.y = element_text(face = "bold"))
 
