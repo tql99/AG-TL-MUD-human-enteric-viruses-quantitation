@@ -13,7 +13,7 @@ install.packages("rstudioapi") # Needed to set working directory using "getActiv
 install_github("vqv/ggbiplot") # Visualize PCA. If can't install package, load library(devtools) first.
 install.packages("Hmisc") # Needed for (Spearman's) correlation analyses.
 install.packages("reshape2") # Melts correlation matrix to visualize it.
-
+install.packages("report") # Contains funtion cite_packages() that lists every used package's citation.
 
 library(sasLM)
 library(readxl)
@@ -23,6 +23,7 @@ library(devtools)
 library(ggbiplot)
 library(Hmisc)
 library(reshape2)
+library(report)
 
 
 setwd(dirname(getActiveDocumentContext()$path)) # IMPORTANT - Set working directory to whatever folder that's containing this script.
@@ -61,19 +62,10 @@ input.cleaning <- function(x){
 
 # Information for references:
 citation() # Info on how to cite R.
-RStudio.Version() # Contain "copy-and-paste" reference entry.
-sessionInfo() # Info on installed packages.
-
-citation("sasLM") # How to cite package in quotation marks.
-citation("readxl")
-citation("dplyr")
-citation("rstudioapi")
-citation("devtools") 
-citation("ggbiplot")
-citation("Hmisc")
-citation("reshape2")
-
-
+RStudio.Version() # Contain "copy-and-paste" reference entry for RStudio.
+citation("sasLM") # How to cite package in quotation marks. Apply to other packages as needed.
+cite_packages() # Get references for all packages used.
+sessionInfo() # Get version number for all packages if cite_packages() didn't help. Just reference the packages in cite_packages(), though.
 ################################################################################
 
 # Adeno:
