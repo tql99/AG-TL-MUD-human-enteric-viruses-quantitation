@@ -65,6 +65,7 @@ citation() # Info on how to cite R.
 RStudio.Version() # Contain "copy-and-paste" reference entry for RStudio.
 citation("sasLM") # How to cite package in quotation marks. Apply to other packages as needed.
 cite_packages() # Get references for all packages used.
+# NOTE for reshape2: Info in "cite_package()" is for reshape. Do manual searches for reshape2 info.
 sessionInfo() # Get version number for all packages if cite_packages() didn't help. Just reference the packages in cite_packages(), though.
 ################################################################################
 
