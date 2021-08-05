@@ -828,14 +828,16 @@ capture.output(eff_PCA_out_summary, file = 'R_analyses_output/PCA/eff_PCA_out_su
 pdf('R_analyses_output/PCA/eff_PCA_out_biplot_12.pdf', width = 13, height = 8) # Create the pdf output file.
 eff_PCA_out_biplot_12 <- ggbiplot(eff_PCA_out, ellipse = T, groups = as.factor(unique(eff_PCA_in$Time))) +
   geom_text(label = eff_PCA_in$Time, color = 'black', size = 4, position = position_jitter(width = .1, height = .1)) +
-  geom_point(shape = 21, colour = 'black', fill = 'black')
+  geom_point(shape = 21, colour = 'black', fill = 'black') +
+  guides(color=guide_legend("Events"))
 print(eff_PCA_out_biplot_12)
 dev.off() # Tell R you're done adding content to the pdf file.
 
 pdf('R_analyses_output/PCA/eff_PCA_out_biplot_noAxes_12.pdf', width = 13, height = 8) # Create the pdf output file.
 eff_PCA_out_biplot_noAxes_12 <- ggbiplot(eff_PCA_out, ellipse = T, groups = as.factor(unique(eff_PCA_in$Time)), var.axes = F) +
   geom_text(label = eff_PCA_in$Time, color = 'black', size = 4, position = position_jitter(width = .1, height = .1)) +
-  geom_point(shape = 21, colour = 'black', fill = 'black') 
+  geom_point(shape = 21, colour = 'black', fill = 'black') + 
+  guides(color=guide_legend("Events"))
 print(eff_PCA_out_biplot_noAxes_12)
 dev.off() # Tell R you're done adding content to the pdf file.
 
@@ -843,14 +845,16 @@ dev.off() # Tell R you're done adding content to the pdf file.
 pdf('R_analyses_output/PCA/eff_PCA_out_biplot_23.pdf', width = 13, height = 8) # Create the pdf output file.
 eff_PCA_out_biplot_23 <- ggbiplot(eff_PCA_out, choices = c(2,3), ellipse = T, groups = as.factor(unique(eff_PCA_in$Time))) +
   geom_text(label = eff_PCA_in$Time, color = 'black', size = 4, position = position_jitter(width = .1, height = .1)) +
-  geom_point(shape = 21, colour = 'black', fill = 'black')
+  geom_point(shape = 21, colour = 'black', fill = 'black') +
+  guides(color=guide_legend("Events"))
 print(eff_PCA_out_biplot_23)
 dev.off() # Tell R you're done adding content to the pdf file.
 
 pdf('R_analyses_output/PCA/eff_PCA_out_biplot_noAxes_23.pdf', width = 13, height = 8) # Create the pdf output file.
 eff_PCA_out_biplot_noAxes_23 <- ggbiplot(eff_PCA_out, choices = c(2,3), ellipse = T, groups = as.factor(unique(eff_PCA_in$Time)), var.axes = F) +
   geom_text(label = eff_PCA_in$Time, color = 'black', size = 4, position = position_jitter(width = .1, height = .1)) +
-  geom_point(shape = 21, colour = 'black', fill = 'black') 
+  geom_point(shape = 21, colour = 'black', fill = 'black') +
+  guides(color=guide_legend("Events"))
 print(eff_PCA_out_biplot_noAxes_23)
 dev.off() # Tell R you're done adding content to the pdf file.
 
@@ -858,14 +862,16 @@ dev.off() # Tell R you're done adding content to the pdf file.
 pdf('R_analyses_output/PCA/eff_PCA_out_biplot_13.pdf', width = 13, height = 8) # Create the pdf output file.
 eff_PCA_out_biplot_13 <- ggbiplot(eff_PCA_out, choices = c(1,3), ellipse = T, groups = as.factor(unique(eff_PCA_in$Time))) +
   geom_text(label = eff_PCA_in$Time, color = 'black', size = 4, position = position_jitter(width = .1, height = .1)) +
-  geom_point(shape = 21, colour = 'black', fill = 'black')
+  geom_point(shape = 21, colour = 'black', fill = 'black') +
+  guides(color=guide_legend("Events"))
 print(eff_PCA_out_biplot_13)
 dev.off() # Tell R you're done adding content to the pdf file.
 
 pdf('R_analyses_output/PCA/eff_PCA_out_biplot_noAxes_13.pdf', width = 13, height = 8) # Create the pdf output file.
 eff_PCA_out_biplot_noAxes_13 <- ggbiplot(eff_PCA_out, choices = c(1,3), ellipse = T, groups = as.factor(unique(eff_PCA_in$Time)), var.axes = F) +
   geom_text(label = eff_PCA_in$Time, color = 'black', size = 4, position = position_jitter(width = .1, height = .1)) +
-  geom_point(shape = 21, colour = 'black', fill = 'black') 
+  geom_point(shape = 21, colour = 'black', fill = 'black') +
+  guides(color=guide_legend("Events"))
 print(eff_PCA_out_biplot_noAxes_13)
 dev.off() # Tell R you're done adding content to the pdf file.
 
